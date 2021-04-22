@@ -1,0 +1,540 @@
+/* screen - check-out-confirmation */
+
+.check-out-confirmation {
+  background-color: var(--mercury);
+  height: 1024px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.check-out-confirmation .button-uXmefv {
+  align-items: center;
+  background-color: var(--roman);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-end;
+  margin-top: 23px;
+  min-width: 402px;
+  padding: 0 18px;
+  position: relative;
+  width: auto;
+}
+.check-out-confirmation .check-in-confirmation-AX7pWk {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  min-height: 17px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 302px;
+}
+.check-out-confirmation .check-out-info-5tY30L {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  min-height: 14px;
+  min-width: 59px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .check-out-info-Kjofvl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-top: 8px;
+  min-height: 17px;
+  min-width: 147px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .check-out-info-WhXV5g {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.20px;
+  line-height: 28px;
+  margin-top: 6px;
+  min-height: 28px;
+  min-width: 77px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .check-out-info-eY8U9x {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.20px;
+  line-height: 28px;
+  margin-right: -2px;
+  margin-top: 6px;
+  min-height: 28px;
+  min-width: 83px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .check-out-info-ju1EPa {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  margin-right: -2px;
+  min-height: 14px;
+  min-width: 66px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .checked-in-with-0-dependants-Kjofvl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-top: 8px;
+  min-height: 20px;
+  min-width: 220px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .default-user-image-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  object-fit: cover;
+  position: absolute;
+  top: 960px;
+  width: 36px;
+}
+.check-out-confirmation .ellipse-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  position: absolute;
+  top: 129px;
+  width: 36px;
+}
+.check-out-confirmation .flex-row-tgJJXx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 8px;
+  justify-content: flex-start;
+  margin-left: -1px;
+  margin-top: 1px;
+  min-width: 24px;
+  position: relative;
+  width: auto;
+}
+.check-out-confirmation .flex-row-vFG21x {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 10px;
+  justify-content: flex-start;
+  margin-left: 3px;
+  margin-top: -1px;
+  min-width: 17px;
+  position: relative;
+  width: auto;
+}
+.check-out-confirmation .frame-49-uXmefv {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-top: 23px;
+  min-width: 402px;
+  position: relative;
+  width: auto;
+}
+.check-out-confirmation .frame-50-qZSPxD {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-left: 32px;
+  min-height: 81px;
+  position: relative;
+  width: 225px;
+}
+.check-out-confirmation .frame-51-uXmefv {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 91px;
+  justify-content: flex-start;
+  min-width: 402px;
+  position: relative;
+  width: auto;
+}
+.check-out-confirmation .frame-52-ibCiRU {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 48px;
+  position: relative;
+  width: 75px;
+}
+.check-out-confirmation .frame-53-ibCiRU {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-left: 12px;
+  min-height: 48px;
+  position: relative;
+  width: 81px;
+}
+.check-out-confirmation .frame-7-AX7pWk {
+  align-items: center;
+  background-color: var(--alabaster);
+  border-radius: 16px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-top: 18px;
+  min-height: 329px;
+  padding: 24px 0;
+  position: relative;
+  width: 450px;
+}
+.check-out-confirmation .group-1-oxAPb3 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 19px;
+  min-height: 60px;
+  position: absolute;
+  top: -19px;
+  transform: rotate(90.00deg);
+  width: 23px;
+}
+.check-out-confirmation .group-14-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 527px;
+  min-height: 364px;
+  position: absolute;
+  top: 330px;
+  width: 452px;
+}
+.check-out-confirmation .group-18-qZSPxD {
+  align-items: flex-start;
+  background-color: transparent;
+  background-image: url(../img/ellipse-10@2x.svg);
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 91px;
+  justify-content: flex-end;
+  min-width: 91px;
+  padding: 28.8px 26.2px;
+  position: relative;
+  width: auto;
+}
+.check-out-confirmation .group-2-v9832d {
+  background-color: transparent;
+  height: 44px;
+  left: 33px;
+  position: absolute;
+  top: 27px;
+  width: 62px;
+}
+.check-out-confirmation .group-3-v9832d {
+  background-color: transparent;
+  height: 20px;
+  left: 23px;
+  position: absolute;
+  top: 184px;
+  width: 18px;
+}
+.check-out-confirmation .group-4-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 18px;
+  justify-content: center;
+  left: 22px;
+  min-width: 20px;
+  position: absolute;
+  top: 138px;
+  width: auto;
+}
+.check-out-confirmation .group-5-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 21px;
+  min-height: 18px;
+  position: absolute;
+  top: 232px;
+  width: 22px;
+}
+.check-out-confirmation .hero-sushi-lidcombe-Kjofvl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.20px;
+  line-height: 28px;
+  min-height: 28px;
+  min-width: 227px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .jabber-i1384856548-oxAPb3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: auto;
+}
+.check-out-confirmation .line-5-ibCiRU {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 2px;
+  margin-left: 12px;
+  position: relative;
+  width: 222px;
+}
+.check-out-confirmation .line-5-uXmefv {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 23px;
+  position: relative;
+  width: 402px;
+}
+.check-out-confirmation .line-6-uXmefv {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 23px;
+  position: relative;
+  width: 402px;
+}
+.check-out-confirmation .medium-i2181760265-x8XTzJ {
+  background-color: transparent;
+  color: var(--alabaster);
+  flex-shrink: 1;
+  font-family: 'Montserrat', Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  min-height: 26px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 364px;
+}
+.check-out-confirmation .rectangle-1-tQhKpJ {
+  background-color: var(--bittersweet);
+  flex-shrink: 1;
+  height: 27px;
+  margin-left: -8.97px;
+  margin-top: -62px;
+  position: relative;
+  width: 14px;
+}
+.check-out-confirmation .rectangle-10-C61RwL {
+  background-color: var(--mercury);
+  height: 1024px;
+  left: 64px;
+  position: absolute;
+  top: 0px;
+  width: 1376px;
+}
+.check-out-confirmation .rectangle-3-v9832d {
+  background-color: var(--gallery);
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 64px;
+}
+.check-out-confirmation .rectangle-6-v9832d {
+  background-color: transparent;
+  height: 123px;
+  left: -13px;
+  position: absolute;
+  top: -11px;
+  width: 154px;
+}
+.check-out-confirmation .sidebar-closed-C61RwL {
+  background-color: transparent;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 128px;
+}
+.check-out-confirmation .vector-19-Vf0uRf {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 31px;
+  position: relative;
+  width: 38px;
+}
+.check-out-confirmation .vector-Fru0G0 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  position: relative;
+  width: 18px;
+}
+.check-out-confirmation .vector-KKLd96 {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  margin-left: 0px;
+  position: relative;
+  width: 6px;
+}
+.check-out-confirmation .vector-LU8Wxp {
+  background-color: transparent;
+  height: 6px;
+  left: 12px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.check-out-confirmation .vector-Ri9xx9 {
+  background-color: transparent;
+  height: 20px;
+  left: -1px;
+  position: absolute;
+  top: 1px;
+  width: 20px;
+}
+.check-out-confirmation .vector-hxXIgf {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  position: relative;
+  width: 10px;
+}
+.check-out-confirmation .vector-mwbllv {
+  background-color: transparent;
+  height: 6px;
+  left: 4px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.check-out-confirmation .vector-oxiYxY {
+  background-color: transparent;
+  height: 2px;
+  left: -1px;
+  position: absolute;
+  top: 7px;
+  width: 20px;
+}
+.check-out-confirmation .vector-tQhKpJ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 23px;
+  margin-left: 3.82px;
+  margin-top: 10px;
+  position: relative;
+  transform: rotate(-90.00deg);
+  width: 60px;
+}
+.check-out-confirmation .vector-vJslbB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 20px;
+  margin-top: -1px;
+  position: relative;
+  width: 22px;
+}
+.check-out-confirmation .vector-xaJSzx {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  margin-left: 1px;
+  position: relative;
+  width: 5px;
+}

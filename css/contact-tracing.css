@@ -1,0 +1,1290 @@
+/* screen - contact-tracing */
+
+.contact-tracing {
+  background-color: var(--mercury);
+  height: 1024px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.contact-tracing .check-in-map-bAyQtV {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  min-height: 17px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 969px;
+}
+.contact-tracing .default-user-image-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  object-fit: cover;
+  position: absolute;
+  top: 960px;
+  width: 36px;
+}
+.contact-tracing .ellipse-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  position: absolute;
+  top: 129px;
+  width: 36px;
+}
+.contact-tracing .ellipse-2-GALrsc {
+  background-color: transparent;
+  height: 48px;
+  left: 6px;
+  position: absolute;
+  top: 0px;
+  width: 42px;
+}
+.contact-tracing .ellipse-2-lbeHzm {
+  background-color: transparent;
+  height: 48px;
+  left: 6px;
+  position: absolute;
+  top: 0px;
+  width: 42px;
+}
+.contact-tracing .ellipse-2-mN55KG {
+  background-color: transparent;
+  height: 48px;
+  left: 6px;
+  position: absolute;
+  top: 0px;
+  width: 42px;
+}
+.contact-tracing .ellipse-2-sqzIJB {
+  background-color: transparent;
+  height: 48px;
+  left: 6px;
+  position: absolute;
+  top: 0px;
+  width: 42px;
+}
+.contact-tracing .ellipse-2-t8ReTq {
+  background-color: transparent;
+  height: 48px;
+  left: 6px;
+  position: absolute;
+  top: 0px;
+  width: 42px;
+}
+.contact-tracing .ellipse-2-zzqT9f {
+  background-color: transparent;
+  height: 48px;
+  left: 6px;
+  position: absolute;
+  top: 0px;
+  width: 42px;
+}
+.contact-tracing .ellipse-3-GALrsc {
+  background-color: transparent;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+.contact-tracing .ellipse-3-lbeHzm {
+  background-color: transparent;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+.contact-tracing .ellipse-3-mN55KG {
+  background-color: transparent;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+.contact-tracing .ellipse-3-qI10m1 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  margin-left: 93px;
+  margin-top: 22.0px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .ellipse-3-sqzIJB {
+  background-color: transparent;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+.contact-tracing .ellipse-3-t8ReTq {
+  background-color: transparent;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+.contact-tracing .ellipse-3-zzqT9f {
+  background-color: transparent;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+.contact-tracing .ellipse-4-qI10m1 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  margin-left: 142px;
+  margin-top: 98.0px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .ellipse-5-qI10m1 {
+  align-self: flex-start;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  margin-left: 83px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .ellipse-6-qI10m1 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  margin-bottom: 88.0px;
+  margin-left: 90px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .ellipse-7-qI10m1 {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  margin-bottom: 11px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .ellipse-8-Zb0Tdb {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  margin-top: 101px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .ellipse-9-Zb0Tdb {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .flex-col-qI10m1 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-left: 236px;
+  margin-top: 15.0px;
+  min-height: 161px;
+  position: relative;
+  width: 30px;
+}
+.contact-tracing .flex-row-tgJJXx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 8px;
+  justify-content: flex-start;
+  margin-left: -1px;
+  margin-top: 1px;
+  min-width: 24px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .flex-row-vFG21x {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 10px;
+  justify-content: flex-start;
+  margin-left: 3px;
+  margin-top: -1px;
+  min-width: 17px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-10-3q3PHw {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-left: 677px;
+  min-width: 201px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-10-GRk1hk {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-left: 677px;
+  min-width: 201px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-10-axrZvk {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-left: 677px;
+  min-width: 201px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-10-g9FwwJ {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-left: 677px;
+  min-width: 201px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-10-ukPlZM {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-left: 677px;
+  min-width: 201px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-10-xuWwJo {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-left: 677px;
+  min-width: 201px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-17-WKyl3Y {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-18-WKyl3Y {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-top: 15px;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-19-WKyl3Y {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-top: 15px;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-20-WKyl3Y {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-top: 15px;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-21-WKyl3Y {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-top: 15px;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-22-WKyl3Y {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 48px;
+  justify-content: flex-start;
+  margin-top: 15px;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-30-3R7gok {
+  align-items: center;
+  background-color: transparent;
+  background-image: url(../img/rectangle-13@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 502px;
+  justify-content: flex-end;
+  min-width: 1048px;
+  padding: 120px 102px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .frame-8-CcEnn8 {
+  align-items: center;
+  background-color: var(--alabaster);
+  border-radius: 16px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-top: 17px;
+  min-height: 496px;
+  padding: 24px 0;
+  position: relative;
+  width: 1096px;
+}
+.contact-tracing .frame-8-bAyQtV {
+  align-items: center;
+  background-color: var(--alabaster);
+  border-radius: 16px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 550px;
+  justify-content: flex-start;
+  margin-top: 17px;
+  min-width: 1096px;
+  padding: 0 24px;
+  position: relative;
+  width: auto;
+}
+.contact-tracing .group-1-oxAPb3 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 19px;
+  min-height: 60px;
+  position: absolute;
+  top: -19px;
+  transform: rotate(90.00deg);
+  width: 23px;
+}
+.contact-tracing .group-10-1Stffc {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 48px;
+  margin-left: 27px;
+  position: relative;
+  width: 50px;
+}
+.contact-tracing .group-10-AHc1tt {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 48px;
+  margin-left: 27px;
+  position: relative;
+  width: 50px;
+}
+.contact-tracing .group-10-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 204px;
+  min-height: 530px;
+  position: absolute;
+  top: 670px;
+  width: 1098px;
+}
+.contact-tracing .group-10-Tr72Ts {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 48px;
+  margin-left: 27px;
+  position: relative;
+  width: 50px;
+}
+.contact-tracing .group-10-tx27Tb {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 48px;
+  margin-left: 27px;
+  position: relative;
+  width: 50px;
+}
+.contact-tracing .group-10-xj6Qsd {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 48px;
+  margin-left: 27px;
+  position: relative;
+  width: 50px;
+}
+.contact-tracing .group-11-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 204px;
+  min-height: 584px;
+  position: absolute;
+  top: 62px;
+  width: 1098px;
+}
+.contact-tracing .group-2-v9832d {
+  background-color: transparent;
+  height: 44px;
+  left: 33px;
+  position: absolute;
+  top: 27px;
+  width: 62px;
+}
+.contact-tracing .group-3-v9832d {
+  background-color: transparent;
+  height: 20px;
+  left: 23px;
+  position: absolute;
+  top: 184px;
+  width: 18px;
+}
+.contact-tracing .group-4-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 18px;
+  justify-content: center;
+  left: 22px;
+  min-width: 20px;
+  position: absolute;
+  top: 138px;
+  width: auto;
+}
+.contact-tracing .group-5-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 21px;
+  min-height: 18px;
+  position: absolute;
+  top: 232px;
+  width: 22px;
+}
+.contact-tracing .group-7-y6HERV {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 48px;
+  margin-left: 27px;
+  position: relative;
+  width: 50px;
+}
+.contact-tracing .group-8-3q3PHw {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 42px;
+  position: relative;
+  width: 170px;
+}
+.contact-tracing .group-8-GRk1hk {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 42px;
+  position: relative;
+  width: 170px;
+}
+.contact-tracing .group-8-axrZvk {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 42px;
+  position: relative;
+  width: 170px;
+}
+.contact-tracing .group-8-g9FwwJ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 42px;
+  position: relative;
+  width: 170px;
+}
+.contact-tracing .group-8-ukPlZM {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 42px;
+  position: relative;
+  width: 170px;
+}
+.contact-tracing .group-8-xuWwJo {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 42px;
+  position: relative;
+  width: 170px;
+}
+.contact-tracing .group-9-1Stffc {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 36px;
+  position: relative;
+  width: 126px;
+}
+.contact-tracing .group-9-AHc1tt {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 36px;
+  position: relative;
+  width: 126px;
+}
+.contact-tracing .group-9-Tr72Ts {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 36px;
+  position: relative;
+  width: 126px;
+}
+.contact-tracing .group-9-tx27Tb {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 36px;
+  position: relative;
+  width: 126px;
+}
+.contact-tracing .group-9-xj6Qsd {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 36px;
+  position: relative;
+  width: 126px;
+}
+.contact-tracing .group-9-y6HERV {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 36px;
+  position: relative;
+  width: 126px;
+}
+.contact-tracing .high-GALrsc {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .high-lbeHzm {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .high-mN55KG {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .high-sqzIJB {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .high-t8ReTq {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .high-zzqT9f {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .jabber-i11710286548-oxAPb3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .line-1-WKyl3Y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 15px;
+  position: relative;
+  width: 1048px;
+}
+.contact-tracing .line-2-WKyl3Y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 15px;
+  position: relative;
+  width: 1048px;
+}
+.contact-tracing .line-3-WKyl3Y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 15px;
+  position: relative;
+  width: 1048px;
+}
+.contact-tracing .line-4-WKyl3Y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 15px;
+  position: relative;
+  width: 1048px;
+}
+.contact-tracing .line-5-WKyl3Y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 15px;
+  position: relative;
+  width: 1048px;
+}
+.contact-tracing .past-check-ins-CcEnn8 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  min-height: 17px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 969px;
+}
+.contact-tracing .rectangle-1-tQhKpJ {
+  background-color: var(--bittersweet);
+  flex-shrink: 1;
+  height: 27px;
+  margin-left: -8.97px;
+  margin-top: -62px;
+  position: relative;
+  width: 14px;
+}
+.contact-tracing .rectangle-10-C61RwL {
+  background-color: var(--mercury);
+  height: 1303px;
+  left: 66px;
+  position: absolute;
+  top: 0px;
+  width: 1376px;
+}
+.contact-tracing .rectangle-3-v9832d {
+  background-color: var(--gallery);
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 64px;
+}
+.contact-tracing .rectangle-6-v9832d {
+  background-color: transparent;
+  height: 123px;
+  left: -13px;
+  position: absolute;
+  top: -11px;
+  width: 154px;
+}
+.contact-tracing .sidebar-closed-C61RwL {
+  background-color: transparent;
+  height: 1024px;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 128px;
+}
+.contact-tracing .varus-cafe-C9yn1z {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .varus-cafe-EZACTy {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .varus-cafe-HilaHq {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .varus-cafe-VXp5DA {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .varus-cafe-sjcXXX {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .varus-cafe-zFY7dT {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .vector-Fru0G0 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  position: relative;
+  width: 18px;
+}
+.contact-tracing .vector-KKLd96 {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  margin-left: 0px;
+  position: relative;
+  width: 6px;
+}
+.contact-tracing .vector-LU8Wxp {
+  background-color: transparent;
+  height: 6px;
+  left: 12px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.contact-tracing .vector-Ri9xx9 {
+  background-color: transparent;
+  height: 20px;
+  left: -1px;
+  position: absolute;
+  top: 1px;
+  width: 20px;
+}
+.contact-tracing .vector-hxXIgf {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  position: relative;
+  width: 10px;
+}
+.contact-tracing .vector-mwbllv {
+  background-color: transparent;
+  height: 6px;
+  left: 4px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.contact-tracing .vector-oxiYxY {
+  background-color: transparent;
+  height: 2px;
+  left: -1px;
+  position: absolute;
+  top: 7px;
+  width: 20px;
+}
+.contact-tracing .vector-tQhKpJ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 23px;
+  margin-left: 3.82px;
+  margin-top: 10px;
+  position: relative;
+  transform: rotate(-90.00deg);
+  width: 60px;
+}
+.contact-tracing .vector-vJslbB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 20px;
+  margin-top: -1px;
+  position: relative;
+  width: 22px;
+}
+.contact-tracing .vector-xaJSzx {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  margin-left: 1px;
+  position: relative;
+  width: 5px;
+}
+.contact-tracing .visited-6th-feb-2020-2oJVyB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  min-height: 17px;
+  min-width: 124px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .visited-6th-feb-2020-HCURIo {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  min-height: 17px;
+  min-width: 124px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .visited-6th-feb-2020-Qnc4MH {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  min-height: 17px;
+  min-width: 124px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .visited-6th-feb-2020-WtUvSN {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  min-height: 17px;
+  min-width: 124px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .visited-6th-feb-2020-pIjGy1 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  min-height: 17px;
+  min-width: 124px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .visited-6th-feb-2020-qlOx1x {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  min-height: 17px;
+  min-width: 124px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x1235pm-149pm-2oJVyB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  margin-top: 2px;
+  min-height: 17px;
+  min-width: 104px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x1235pm-149pm-HCURIo {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  margin-top: 2px;
+  min-height: 17px;
+  min-width: 104px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x1235pm-149pm-Qnc4MH {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  margin-top: 2px;
+  min-height: 17px;
+  min-width: 104px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x1235pm-149pm-WtUvSN {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  margin-top: 2px;
+  min-height: 17px;
+  min-width: 104px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x1235pm-149pm-pIjGy1 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  margin-top: 2px;
+  min-height: 17px;
+  min-width: 104px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x1235pm-149pm-qlOx1x {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  margin-right: 2px;
+  margin-top: 2px;
+  min-height: 17px;
+  min-width: 104px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x7-cough-lane-epping-nsw-C9yn1z {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x7-cough-lane-epping-nsw-EZACTy {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x7-cough-lane-epping-nsw-HilaHq {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x7-cough-lane-epping-nsw-VXp5DA {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x7-cough-lane-epping-nsw-sjcXXX {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  white-space: nowrap;
+  width: auto;
+}
+.contact-tracing .x7-cough-lane-epping-nsw-zFY7dT {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  white-space: nowrap;
+  width: auto;
+}

@@ -1,0 +1,1231 @@
+/* screen - vaccine-rollout */
+
+.vaccine-rollout {
+  background-color: var(--mercury);
+  height: 1024px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.vaccine-rollout .button-myDtlx {
+  align-items: center;
+  background-color: var(--roman-2);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 153px;
+  min-width: 286px;
+  padding: 0 18px;
+  position: relative;
+  width: auto;
+}
+.vaccine-rollout .default-user-image-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  object-fit: cover;
+  position: absolute;
+  top: 960px;
+  width: 36px;
+}
+.vaccine-rollout .ellipse-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  position: absolute;
+  top: 129px;
+  width: 36px;
+}
+.vaccine-rollout .ellipse-4-cjtTnK {
+  background-color: transparent;
+  height: 18px;
+  left: 187px;
+  position: absolute;
+  top: 113px;
+  width: 18px;
+}
+.vaccine-rollout .ellipse-5-cjtTnK {
+  background-color: transparent;
+  height: 18px;
+  left: 270px;
+  position: absolute;
+  top: 113px;
+  width: 18px;
+}
+.vaccine-rollout .flex-row-tgJJXx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 8px;
+  justify-content: flex-start;
+  margin-left: -1px;
+  margin-top: 1px;
+  min-width: 24px;
+  position: relative;
+  width: auto;
+}
+.vaccine-rollout .flex-row-vFG21x {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 10px;
+  justify-content: flex-start;
+  margin-left: 3px;
+  margin-top: -1px;
+  min-width: 17px;
+  position: relative;
+  width: auto;
+}
+.vaccine-rollout .frame-27-WKyl3Y {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 608px;
+  justify-content: flex-start;
+  min-width: 1048px;
+  position: relative;
+  width: auto;
+}
+.vaccine-rollout .frame-28-vWsaJo {
+  background-color: transparent;
+  height: 618px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 1048px;
+}
+.vaccine-rollout .frame-29-QVreL4 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 64px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 1048px;
+}
+.vaccine-rollout .frame-8-5LnI0L {
+  align-items: center;
+  background-color: var(--alabaster);
+  border-radius: 16px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 112px;
+  justify-content: flex-start;
+  margin-top: 17px;
+  min-width: 1096px;
+  padding: 0 24px;
+  position: relative;
+  width: auto;
+}
+.vaccine-rollout .frame-8-CcEnn8 {
+  align-items: center;
+  background-color: var(--alabaster);
+  border-radius: 16px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 656px;
+  justify-content: flex-start;
+  margin-top: 17px;
+  min-width: 1096px;
+  padding: 0 24px;
+  position: relative;
+  width: auto;
+}
+.vaccine-rollout .frame-8-myDtlx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 64px;
+  position: relative;
+  width: 609px;
+}
+.vaccine-rollout .gridv1-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 571px;
+  width: 991px;
+}
+.vaccine-rollout .gridv1-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 56px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv10-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 287px;
+  width: 991px;
+}
+.vaccine-rollout .gridv10-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 602px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv11-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 255px;
+  width: 991px;
+}
+.vaccine-rollout .gridv11-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 662px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv12-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 224px;
+  width: 991px;
+}
+.vaccine-rollout .gridv12-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 722px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv13-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 192px;
+  width: 991px;
+}
+.vaccine-rollout .gridv13-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 783px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv14-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 161px;
+  width: 991px;
+}
+.vaccine-rollout .gridv14-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 844px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv15-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 129px;
+  width: 991px;
+}
+.vaccine-rollout .gridv15-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 905px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv16-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 98px;
+  width: 991px;
+}
+.vaccine-rollout .gridv16-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 966px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv17-581Mys {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 66px;
+  width: 991px;
+}
+.vaccine-rollout .gridv17-A68n1P {
+  background-color: transparent;
+  height: 567px;
+  left: 1047px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv17-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 1027px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv18-vWsaJo {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 34px;
+  width: 991px;
+}
+.vaccine-rollout .gridv19-vWsaJo {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 4px;
+  width: 991px;
+}
+.vaccine-rollout .gridv2-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 540px;
+  width: 991px;
+}
+.vaccine-rollout .gridv2-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 116px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv3-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 508px;
+  width: 991px;
+}
+.vaccine-rollout .gridv3-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 176px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv4-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 476px;
+  width: 991px;
+}
+.vaccine-rollout .gridv4-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 237px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv5-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 445px;
+  width: 991px;
+}
+.vaccine-rollout .gridv5-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 298px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv6-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 413px;
+  width: 991px;
+}
+.vaccine-rollout .gridv6-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 359px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv7-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 382px;
+  width: 991px;
+}
+.vaccine-rollout .gridv7-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 419px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv8-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 350px;
+  width: 991px;
+}
+.vaccine-rollout .gridv8-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 480px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .gridv9-A68n1P {
+  background-color: transparent;
+  height: 2px;
+  left: 57px;
+  position: absolute;
+  top: 319px;
+  width: 991px;
+}
+.vaccine-rollout .gridv9-vWsaJo {
+  background-color: transparent;
+  height: 567px;
+  left: 541px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+.vaccine-rollout .group-1-oxAPb3 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 19px;
+  min-height: 60px;
+  position: absolute;
+  top: -19px;
+  transform: rotate(90.00deg);
+  width: 23px;
+}
+.vaccine-rollout .group-10-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 206px;
+  min-height: 690px;
+  position: absolute;
+  top: 232px;
+  width: 1098px;
+}
+.vaccine-rollout .group-10-VMr6Om {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 206px;
+  min-height: 146px;
+  position: absolute;
+  top: 62px;
+  width: 1098px;
+}
+.vaccine-rollout .group-2-v9832d {
+  background-color: transparent;
+  height: 44px;
+  left: 33px;
+  position: absolute;
+  top: 27px;
+  width: 62px;
+}
+.vaccine-rollout .group-3-v9832d {
+  background-color: transparent;
+  height: 20px;
+  left: 23px;
+  position: absolute;
+  top: 184px;
+  width: 18px;
+}
+.vaccine-rollout .group-4-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 18px;
+  justify-content: center;
+  left: 22px;
+  min-width: 20px;
+  position: absolute;
+  top: 138px;
+  width: auto;
+}
+.vaccine-rollout .group-5-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 21px;
+  min-height: 18px;
+  position: absolute;
+  top: 232px;
+  width: 22px;
+}
+.vaccine-rollout .jabber-i1081016548-oxAPb3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: auto;
+}
+.vaccine-rollout .line-8-cjtTnK {
+  background-color: transparent;
+  height: 444px;
+  left: 192px;
+  position: absolute;
+  top: 128px;
+  width: 4px;
+}
+.vaccine-rollout .line-9-cjtTnK {
+  background-color: transparent;
+  height: 444px;
+  left: 275px;
+  position: absolute;
+  top: 128px;
+  width: 4px;
+}
+.vaccine-rollout .line-chart-zTxjRZ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 618px;
+  margin-bottom: -10px;
+  position: relative;
+  width: 1124px;
+}
+.vaccine-rollout .line1-A68n1P {
+  background-color: transparent;
+  height: 392px;
+  left: 55px;
+  position: absolute;
+  top: 87px;
+  width: 995px;
+}
+.vaccine-rollout .line1-vWsaJo {
+  background-color: transparent;
+  height: 483px;
+  left: 57px;
+  position: absolute;
+  top: 89px;
+  width: 991px;
+}
+.vaccine-rollout .medium-i11790260277-akzxBG {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  min-height: 26px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 248px;
+}
+.vaccine-rollout .rectangle-1-tQhKpJ {
+  background-color: var(--bittersweet);
+  flex-shrink: 1;
+  height: 27px;
+  margin-left: -8.97px;
+  margin-top: -62px;
+  position: relative;
+  width: 14px;
+}
+.vaccine-rollout .rectangle-10-C61RwL {
+  background-color: var(--mercury);
+  height: 1024px;
+  left: 64px;
+  position: absolute;
+  top: 0px;
+  width: 1376px;
+}
+.vaccine-rollout .rectangle-12-cjtTnK {
+  background-color: transparent;
+  height: 421px;
+  left: 196px;
+  position: absolute;
+  top: 151px;
+  width: 83px;
+}
+.vaccine-rollout .rectangle-3-v9832d {
+  background-color: var(--gallery);
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 64px;
+}
+.vaccine-rollout .rectangle-6-v9832d {
+  background-color: transparent;
+  height: 123px;
+  left: -13px;
+  position: absolute;
+  top: -11px;
+  width: 154px;
+}
+.vaccine-rollout .rollout-estimate-5LnI0L {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  min-height: 17px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 969px;
+}
+.vaccine-rollout .rollout-projection-CcEnn8 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.12px;
+  line-height: 17px;
+  min-height: 17px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 969px;
+}
+.vaccine-rollout .sidebar-closed-C61RwL {
+  background-color: transparent;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 128px;
+}
+.vaccine-rollout .this-estimate-i-ls-you-provided-BOk54O {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-top: 16px;
+  min-height: 20px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 611px;
+}
+.vaccine-rollout .vector-Fru0G0 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  position: relative;
+  width: 18px;
+}
+.vaccine-rollout .vector-KKLd96 {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  margin-left: 0px;
+  position: relative;
+  width: 6px;
+}
+.vaccine-rollout .vector-LU8Wxp {
+  background-color: transparent;
+  height: 6px;
+  left: 12px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.vaccine-rollout .vector-Ri9xx9 {
+  background-color: transparent;
+  height: 20px;
+  left: -1px;
+  position: absolute;
+  top: 1px;
+  width: 20px;
+}
+.vaccine-rollout .vector-hxXIgf {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  position: relative;
+  width: 10px;
+}
+.vaccine-rollout .vector-mwbllv {
+  background-color: transparent;
+  height: 6px;
+  left: 4px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.vaccine-rollout .vector-oxiYxY {
+  background-color: transparent;
+  height: 2px;
+  left: -1px;
+  position: absolute;
+  top: 7px;
+  width: 20px;
+}
+.vaccine-rollout .vector-tQhKpJ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 23px;
+  margin-left: 3.82px;
+  margin-top: 10px;
+  position: relative;
+  transform: rotate(-90.00deg);
+  width: 60px;
+}
+.vaccine-rollout .vector-vJslbB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 20px;
+  margin-top: -1px;
+  position: relative;
+  width: 22px;
+}
+.vaccine-rollout .vector-xaJSzx {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  margin-left: 1px;
+  position: relative;
+  width: 5px;
+}
+.vaccine-rollout .x0-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 567px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x10-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 504px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x1021-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 394px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x1121-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 455px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x122-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 577px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x1221-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 516px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x15-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 473px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x20-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 441px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x20th-july-27th-august-BOk54O {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.20px;
+  line-height: 28px;
+  min-height: 28px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 611px;
+}
+.vaccine-rollout .x222-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 638px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x25-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 410px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x30-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 378px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x322-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 698px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x35-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 346px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x40-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 315px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x421-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 31px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x422-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 759px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x45-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 283px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x5-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 536px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x50-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 252px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x521-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 91px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x522-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 819px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x55-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 220px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x60-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 189px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x621-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 152px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x622-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 880px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x65-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 157px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x70-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 125px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x721-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 213px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x722-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 941px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x75-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 94px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x80-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 62px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x821-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 274px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x822-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 1002px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}
+.vaccine-rollout .x85-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 31px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x90-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 4px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: right;
+  top: 0px;
+  white-space: nowrap;
+  width: 26px;
+}
+.vaccine-rollout .x921-vWsaJo {
+  background-color: transparent;
+  height: auto;
+  left: 334px;
+  letter-spacing: -0.10px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 594px;
+  white-space: nowrap;
+  width: 52px;
+}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,500,600");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,500,600");
+      * {
+        box-sizing: border-box;
+      }
+      .border-1px-mischka {
+        border: 1px solid var(--mischka);
+      }
+      .border-2px-roman {
+        border: 2px solid var(--roman);
+      }
+      .montserrat-bold-abbey-20px {
+        color: var(--abbey);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-alabaster-16px {
+        color: var(--alabaster);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-roman-10px {
+        color: var(--roman);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-roman-20px {
+        color: var(--roman);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-shark-20px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-shark-24px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-shark-32px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxxxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-bold-tuna-14px {
+        color: var(--tuna);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 700;
+      }
+      .montserrat-medium-abbey-10px {
+        color: var(--abbey);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-abbey-12px {
+        color: var(--abbey);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-abbey-14px {
+        color: var(--abbey);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-abbey-16px {
+        color: var(--abbey);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-pale-sky-10px {
+        color: var(--pale-sky);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-shark-12px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-shark-14px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-medium-shark-16px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .montserrat-semi-bold-abbey-12px {
+        color: var(--abbey);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 600;
+      }
+      .montserrat-semi-bold-pale-sky-12px {
+        color: var(--pale-sky);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 600;
+      }
+      .montserrat-semi-bold-roman-14px {
+        color: var(--roman);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 600;
+      }
+      .montserrat-semi-bold-roman-16px {
+        color: var(--roman);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 600;
+      }
+      .montserrat-semi-bold-shark-12px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 600;
+      }
+      .montserrat-semi-bold-shark-16px {
+        color: var(--shark);
+        font-family: var(--font-family-montserrat);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 600;
+      }
+      :root {
+        --abbey: rgba(73, 80, 87, 1);
+        --alabaster: rgba(248, 249, 250, 1);
+        --bittersweet: rgba(255, 104, 104, 1);
+        --font-family-montserrat: "Montserrat", Helvetica;
+        --font-size-l: 13px;
+        --font-size-m: 12px;
+        --font-size-s: 10px;
+        --font-size-xl: 14px;
+        --font-size-xxl: 16px;
+        --font-size-xxxl: 20px;
+        --font-size-xxxxl: 24px;
+        --font-size-xxxxxl: 32px;
+        --gallery: rgba(233, 236, 239, 1);
+        --mercury: rgba(222, 226, 230, 1);
+        --mischka: rgba(206, 212, 218, 1);
+        --pale-sky: rgba(108, 117, 125, 1);
+        --roman: rgba(230, 94, 94, 1);
+        --roman-2: rgba(230, 94, 94, 0.1);
+        --shark: rgba(33, 37, 41, 1);
+        --tuna: rgba(52, 58, 64, 1);
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: rgba(222, 226, 230, 1)">
+    <input type="hidden" id="anPageName" name="page" value="dashboard" />
+    <div class="container-center-horizontal">
+      <div class="dashboard screen">
+        <div class="rectangle-10-C61RwL"></div>
+        <div class="group-12-C61RwL">
+          <div class="recent-news-xFApRQ montserrat-semi-bold-abbey-12px">RECENT NEWS</div>
+          <div class="frame-9-xFApRQ">
+            <div class="frame-23-8Gk4WY">
+              <div class="frame-13-lMyebc">
+                <div class="the-daily-telegraph-HcuGbW montserrat-semi-bold-pale-sky-12px">THE DAILY TELEGRAPH</div>
+                <div class="confusing-qld-c-ew-byron-alerts-HcuGbW montserrat-semi-bold-shark-12px">
+                  ‘Confusing’ QLD clusters; New Byron alerts
+                </div>
+              </div>
+              <img class="rectangle-11-lMyebc" src="img/rectangle-11@2x.png" />
+            </div>
+            <img class="line-3-8Gk4WY" src="img/line-3@2x.svg" />
+            <div class="frame-24-8Gk4WY">
+              <div class="frame-13-5uzh1e">
+                <div class="the-sun-V5GYsm montserrat-semi-bold-pale-sky-12px">THE SUN</div>
+                <div class="staff-at-a-seco-k-expands-to-15-V5GYsm montserrat-semi-bold-shark-12px">
+                  Staff at a second Queensland hospital sent home as coronavirus outbreak expands to 15
+                </div>
+              </div>
+              <img class="rectangle-11-5uzh1e" src="img/rectangle-11-1@2x.png" />
+            </div>
+            <img class="line-4-8Gk4WY" src="img/line-3@2x.svg" />
+            <div class="frame-25-8Gk4WY">
+              <div class="frame-13-TQAdHx">
+                <div class="courier-mail-szhHxk montserrat-semi-bold-pale-sky-12px">COURIER MAIL</div>
+                <div class="toowoomba-cafe-sitive-to-covid-szhHxk montserrat-semi-bold-shark-12px">
+                  Toowoomba cafe customer tests positive to COVID
+                </div>
+              </div>
+              <img class="rectangle-11-TQAdHx" src="img/rectangle-11-2@2x.png" />
+            </div>
+          </div>
+        </div>
+        <div class="group-11-C61RwL">
+          <div class="rollout-estimate-bAyQtV montserrat-semi-bold-abbey-12px">ROLLOUT ESTIMATE</div>
+          <div class="frame-7-bAyQtV">
+            <div class="to-get-your-rol-your-situation-rSzUxj montserrat-medium-shark-14px">
+              <span class="span0-DbZ2Au">To get your </span><span class="span1-DbZ2Au">Rollout Estimate</span
+              ><span class="span2-DbZ2Au">, we need to know a little more about your situation.</span>
+            </div>
+            <div class="button-rSzUxj border-2px-roman">
+              <div class="small-i71160279-ljoW3q montserrat-semi-bold-roman-14px">Fill out my details</div>
+            </div>
+          </div>
+        </div>
+        <div class="group-10-C61RwL">
+          <div class="alerts-CcEnn8 montserrat-semi-bold-abbey-12px">ALERTS</div>
+          <div class="frame-8-CcEnn8">
+            <div class="frame-44-WKyl3Y">
+              <div class="group-24-pFCoMA">
+                <img class="ellipse-12-7mL27H" src="img/ellipse-12@2x.svg" />
+                <div class="x-7mL27H montserrat-bold-roman-20px">!</div>
+              </div>
+              <div class="new-case-detect-contact-us-now-pFCoMA montserrat-medium-shark-14px">
+                New case detected at a venue you recently visited, contact us now.
+              </div>
+              <div class="button-pFCoMA border-2px-roman">
+                <div class="small-i20362360279-2IGSLA montserrat-semi-bold-roman-14px">Contact</div>
+              </div>
+            </div>
+            <img class="line-1-WKyl3Y" src="img/line-1@1x.svg" />
+            <div class="frame-46-WKyl3Y">
+              <div class="group-24-9xrm2N">
+                <img class="ellipse-12-PpnC15" src="img/ellipse-12@2x.svg" />
+                <div class="x-PpnC15 montserrat-bold-roman-20px">!</div>
+              </div>
+              <div class="you-will-soon-b-ith-authorities-9xrm2N montserrat-medium-shark-14px">
+                You will soon be eligible for vaccine rollout, and should make the neccessary arrangements with
+                authorities.
+              </div>
+              <div class="button-9xrm2N border-2px-roman">
+                <div class="small-i20363260279-otah1z montserrat-semi-bold-roman-14px">Book</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-13-C61RwL">
+          <div class="quick-stats-WQXeF1 montserrat-semi-bold-abbey-12px">QUICK STATS</div>
+          <div class="frame-8-WQXeF1">
+            <div class="frame-26-XSdUX6">
+              <div class="group-14-MiOPih">
+                <div class="doses-issued-2xqY0F montserrat-semi-bold-abbey-12px">DOSES ISSUED</div>
+                <div class="x523034-2xqY0F montserrat-bold-shark-32px">523,034</div>
+              </div>
+              <img class="line-6-MiOPih" src="img/line-6@2x.svg" />
+              <div class="group-16-MiOPih">
+                <div class="daily-cases-Kf1B69 montserrat-semi-bold-abbey-12px">DAILY CASES</div>
+                <div class="x12-Kf1B69 montserrat-bold-shark-32px">12</div>
+              </div>
+              <img class="line-7-MiOPih" src="img/line-6@2x.svg" />
+              <div class="group-15-MiOPih">
+                <div class="total-cases-rEdoqw montserrat-semi-bold-abbey-12px">TOTAL CASES</div>
+                <div class="x29296-rEdoqw montserrat-bold-shark-32px">29,296</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-10-VMr6Om">
+          <div class="past-check-ins-5LnI0L montserrat-semi-bold-abbey-12px">PAST CHECK-INS</div>
+          <div class="frame-8-5LnI0L">
+            <div class="frame-17-QVreL4">
+              <div class="group-8-hsbfnK">
+                <div class="varus-cafe-m1dUa8 montserrat-semi-bold-shark-16px">Varus Cafe</div>
+                <div class="x7-cough-lane-epping-nsw-m1dUa8 montserrat-medium-abbey-12px">7 Cough Lane, Epping NSW</div>
+              </div>
+              <div class="frame-10-hsbfnK">
+                <div class="group-9-DLslqq">
+                  <div class="visited-6th-feb-2020-hTlZNy montserrat-medium-shark-12px">Visited 6th Feb 2020</div>
+                  <div class="x1235pm-149pm-hTlZNy montserrat-semi-bold-abbey-12px">12:35PM - 1:49PM</div>
+                </div>
+                <div class="group-7-DLslqq">
+                  <img class="ellipse-2-W1n27d" src="img/ellipse-2@2x.svg" />
+                  <img class="ellipse-3-W1n27d" src="img/ellipse-3@2x.svg" />
+                  <div class="high-W1n27d montserrat-bold-roman-10px">HIGH</div>
+                </div>
+              </div>
+            </div>
+            <img class="line-1-QVreL4" src="img/line-1@1x.svg" />
+            <div class="frame-18-QVreL4">
+              <div class="group-8-zlWIY2">
+                <div class="varus-cafe-1UQ1z8 montserrat-semi-bold-shark-16px">Varus Cafe</div>
+                <div class="x7-cough-lane-epping-nsw-1UQ1z8 montserrat-medium-abbey-12px">7 Cough Lane, Epping NSW</div>
+              </div>
+              <div class="frame-10-zlWIY2">
+                <div class="group-9-KEW80I">
+                  <div class="visited-6th-feb-2020-oOU3sA montserrat-medium-shark-12px">Visited 6th Feb 2020</div>
+                  <div class="x1235pm-149pm-oOU3sA montserrat-semi-bold-abbey-12px">12:35PM - 1:49PM</div>
+                </div>
+                <div class="group-10-KEW80I">
+                  <img class="ellipse-2-c3UdKR" src="img/ellipse-2@2x.svg" />
+                  <img class="ellipse-3-c3UdKR" src="img/ellipse-3@2x.svg" />
+                  <div class="high-c3UdKR montserrat-bold-roman-10px">HIGH</div>
+                </div>
+              </div>
+            </div>
+            <img class="line-2-QVreL4" src="img/line-1@1x.svg" />
+            <div class="frame-19-QVreL4">
+              <div class="group-8-eSgGmv">
+                <div class="varus-cafe-qHIUA3 montserrat-semi-bold-shark-16px">Varus Cafe</div>
+                <div class="x7-cough-lane-epping-nsw-qHIUA3 montserrat-medium-abbey-12px">7 Cough Lane, Epping NSW</div>
+              </div>
+              <div class="frame-10-eSgGmv">
+                <div class="group-9-pwcdGH">
+                  <div class="visited-6th-feb-2020-i8dD0U montserrat-medium-shark-12px">Visited 6th Feb 2020</div>
+                  <div class="x1235pm-149pm-i8dD0U montserrat-semi-bold-abbey-12px">12:35PM - 1:49PM</div>
+                </div>
+                <div class="group-10-pwcdGH">
+                  <img class="ellipse-2-J9H3Ls" src="img/ellipse-2@2x.svg" />
+                  <img class="ellipse-3-J9H3Ls" src="img/ellipse-3@2x.svg" />
+                  <div class="high-J9H3Ls montserrat-bold-roman-10px">HIGH</div>
+                </div>
+              </div>
+            </div>
+            <img class="line-3-QVreL4" src="img/line-1@1x.svg" />
+            <div class="frame-20-QVreL4">
+              <div class="group-8-seLc2E">
+                <div class="varus-cafe-JWIvUx montserrat-semi-bold-shark-16px">Varus Cafe</div>
+                <div class="x7-cough-lane-epping-nsw-JWIvUx montserrat-medium-abbey-12px">7 Cough Lane, Epping NSW</div>
+              </div>
+              <div class="frame-10-seLc2E">
+                <div class="group-9-nKjP4i">
+                  <div class="visited-6th-feb-2020-7C4Is4 montserrat-medium-shark-12px">Visited 6th Feb 2020</div>
+                  <div class="x1235pm-149pm-7C4Is4 montserrat-semi-bold-abbey-12px">12:35PM - 1:49PM</div>
+                </div>
+                <div class="group-10-nKjP4i">
+                  <img class="ellipse-2-9X3Sxx" src="img/ellipse-2@2x.svg" />
+                  <img class="ellipse-3-9X3Sxx" src="img/ellipse-3@2x.svg" />
+                  <div class="high-9X3Sxx montserrat-bold-roman-10px">HIGH</div>
+                </div>
+              </div>
+            </div>
+            <img class="line-4-QVreL4" src="img/line-1@1x.svg" />
+            <div class="frame-21-QVreL4">
+              <div class="group-8-flxxwg">
+                <div class="varus-cafe-jEVSoL montserrat-semi-bold-shark-16px">Varus Cafe</div>
+                <div class="x7-cough-lane-epping-nsw-jEVSoL montserrat-medium-abbey-12px">7 Cough Lane, Epping NSW</div>
+              </div>
+              <div class="frame-10-flxxwg">
+                <div class="group-9-C1yHqB">
+                  <div class="visited-6th-feb-2020-Bfvxbx montserrat-medium-shark-12px">Visited 6th Feb 2020</div>
+                  <div class="x1235pm-149pm-Bfvxbx montserrat-semi-bold-abbey-12px">12:35PM - 1:49PM</div>
+                </div>
+                <div class="group-10-C1yHqB">
+                  <img class="ellipse-2-hHhov2" src="img/ellipse-2@2x.svg" />
+                  <img class="ellipse-3-hHhov2" src="img/ellipse-3@2x.svg" />
+                  <div class="high-hHhov2 montserrat-bold-roman-10px">HIGH</div>
+                </div>
+              </div>
+            </div>
+            <img class="line-5-QVreL4" src="img/line-1@1x.svg" />
+            <div class="frame-22-QVreL4">
+              <div class="group-8-FNTiWm">
+                <div class="varus-cafe-stpn0M montserrat-semi-bold-shark-16px">Varus Cafe</div>
+                <div class="x7-cough-lane-epping-nsw-stpn0M montserrat-medium-abbey-12px">7 Cough Lane, Epping NSW</div>
+              </div>
+              <div class="frame-10-FNTiWm">
+                <div class="group-9-6WHqFd">
+                  <div class="visited-6th-feb-2020-EHkIDe montserrat-medium-shark-12px">Visited 6th Feb 2020</div>
+                  <div class="x1235pm-149pm-EHkIDe montserrat-semi-bold-abbey-12px">12:35PM - 1:49PM</div>
+                </div>
+                <div class="group-10-6WHqFd">
+                  <img class="ellipse-2-Ah9cRg" src="img/ellipse-2@2x.svg" />
+                  <img class="ellipse-3-Ah9cRg" src="img/ellipse-3@2x.svg" />
+                  <div class="high-Ah9cRg montserrat-bold-roman-10px">HIGH</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-closed-C61RwL">
+          <div class="rectangle-3-v9832d"></div>
+          <img class="default-user-image-1-v9832d" src="img/default-user-image-1@2x.png" />
+          <img class="ellipse-1-v9832d" src="img/ellipse-1@2x.svg" />
+          <div class="group-3-v9832d">
+            <img class="vector-Ri9xx9" src="img/vector-1@2x.svg" />
+            <img class="vector-LU8Wxp" src="img/vector-2@2x.svg" />
+            <img class="vector-mwbllv" src="img/vector-2@2x.svg" />
+            <img class="vector-oxiYxY" src="img/vector-4@2x.svg" />
+          </div>
+          <div class="group-4-v9832d"><img class="vector-vJslbB" src="img/vector-5@2x.svg" /></div>
+          <img class="rectangle-6-v9832d" src="img/rectangle-6-1@2x.svg" />
+          <div class="group-2-v9832d">
+            <div class="jabber-i701306548-oxAPb3 montserrat-bold-tuna-14px">JABBER</div>
+            <div class="group-1-oxAPb3">
+              <div class="rectangle-1-tQhKpJ"></div>
+              <img class="vector-tQhKpJ" src="img/vector-6@2x.svg" />
+            </div>
+          </div>
+          <div class="group-5-v9832d">
+            <div class="flex-row-vFG21x">
+              <img class="vector-hxXIgf" src="img/vector-8@2x.svg" />
+              <img class="vector-KKLd96" src="img/vector-10@2x.svg" />
+            </div>
+            <div class="flex-row-tgJJXx">
+              <img class="vector-Fru0G0" src="img/vector-7@2x.svg" />
+              <img class="vector-xaJSzx" src="img/vector-9@2x.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

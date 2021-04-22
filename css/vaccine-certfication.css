@@ -1,0 +1,379 @@
+/* screen - vaccine-certfication */
+
+.vaccine-certfication {
+  background-color: var(--mercury);
+  height: 1024px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.vaccine-certfication .button-C61RwL {
+  align-items: center;
+  background-color: var(--roman-2);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: flex-end;
+  left: 529px;
+  min-width: 128px;
+  padding: 0 22.5px;
+  position: absolute;
+  top: 159px;
+  width: auto;
+}
+.vaccine-certfication .cert-info-0sJeve {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  margin-top: 23px;
+  min-height: 104px;
+  position: relative;
+  text-align: left;
+  width: 388px;
+}
+.vaccine-certfication .default-user-image-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  object-fit: cover;
+  position: absolute;
+  top: 960px;
+  width: 36px;
+}
+.vaccine-certfication .ellipse-1-v9832d {
+  background-color: transparent;
+  height: 36px;
+  left: 14px;
+  position: absolute;
+  top: 129px;
+  width: 36px;
+}
+.vaccine-certfication .flex-row-tgJJXx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 8px;
+  justify-content: flex-start;
+  margin-left: -1px;
+  margin-top: 1px;
+  min-width: 24px;
+  position: relative;
+  width: auto;
+}
+.vaccine-certfication .flex-row-vFG21x {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 10px;
+  justify-content: flex-start;
+  margin-left: 3px;
+  margin-top: -1px;
+  min-width: 17px;
+  position: relative;
+  width: auto;
+}
+.vaccine-certfication .frame-7-C61RwL {
+  align-items: center;
+  background-color: var(--alabaster);
+  border-radius: 32px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 529px;
+  min-height: 647px;
+  padding: 32px 30px;
+  position: absolute;
+  top: 217px;
+  width: 450px;
+}
+.vaccine-certfication .go-back-xHxYv9 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 6px;
+  min-height: 20px;
+  min-width: 60px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.vaccine-certfication .group-1-oxAPb3 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 19px;
+  min-height: 60px;
+  position: absolute;
+  top: -19px;
+  transform: rotate(90.00deg);
+  width: 23px;
+}
+.vaccine-certfication .group-2-v9832d {
+  background-color: transparent;
+  height: 44px;
+  left: 33px;
+  position: absolute;
+  top: 27px;
+  width: 62px;
+}
+.vaccine-certfication .group-3-v9832d {
+  background-color: transparent;
+  height: 20px;
+  left: 23px;
+  position: absolute;
+  top: 184px;
+  width: 18px;
+}
+.vaccine-certfication .group-4-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 18px;
+  justify-content: center;
+  left: 22px;
+  min-width: 20px;
+  position: absolute;
+  top: 138px;
+  width: auto;
+}
+.vaccine-certfication .group-5-v9832d {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 21px;
+  min-height: 18px;
+  position: absolute;
+  top: 232px;
+  width: 22px;
+}
+.vaccine-certfication .info-0sJeve {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.64px;
+  line-height: 42px;
+  min-height: 126px;
+  position: relative;
+  text-align: center;
+  width: 388px;
+}
+.vaccine-certfication .jabber-i1389976548-oxAPb3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: auto;
+}
+.vaccine-certfication .line-5-0sJeve {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 23px;
+  position: relative;
+  width: 386px;
+}
+.vaccine-certfication .line-6-0sJeve {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 1px;
+  margin-top: 23px;
+  position: relative;
+  width: 386px;
+}
+.vaccine-certfication .qrcode-1-0sJeve {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 257px;
+  margin-top: 23px;
+  position: relative;
+  width: 256px;
+}
+.vaccine-certfication .rectangle-1-tQhKpJ {
+  background-color: var(--bittersweet);
+  flex-shrink: 1;
+  height: 27px;
+  margin-left: -8.97px;
+  margin-top: -62px;
+  position: relative;
+  width: 14px;
+}
+.vaccine-certfication .rectangle-10-C61RwL {
+  background-color: var(--mercury);
+  height: 1024px;
+  left: 66px;
+  position: absolute;
+  top: 0px;
+  width: 1376px;
+}
+.vaccine-certfication .rectangle-3-v9832d {
+  background-color: var(--gallery);
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 64px;
+}
+.vaccine-certfication .rectangle-6-v9832d {
+  background-color: transparent;
+  height: 123px;
+  left: -13px;
+  position: absolute;
+  top: -11px;
+  width: 154px;
+}
+.vaccine-certfication .sidebar-closed-C61RwL {
+  background-color: transparent;
+  height: 1024px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 128px;
+}
+.vaccine-certfication .span0-oixYKQ {
+  color: rgba(33,37,41,1.0);
+  font-family: 'Montserrat', Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03px;
+}
+.vaccine-certfication .span1-oixYKQ {
+  color: rgba(33,37,41,1.0);
+  font-family: 'Montserrat', Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.03px;
+}
+.vaccine-certfication .span2-oixYKQ {
+  color: rgba(33,37,41,1.0);
+  font-family: 'Montserrat', Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03px;
+}
+.vaccine-certfication .vector-1-xHxYv9 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 12px;
+  position: relative;
+  width: 16px;
+}
+.vaccine-certfication .vector-Fru0G0 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  position: relative;
+  width: 18px;
+}
+.vaccine-certfication .vector-KKLd96 {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  margin-left: 0px;
+  position: relative;
+  width: 6px;
+}
+.vaccine-certfication .vector-LU8Wxp {
+  background-color: transparent;
+  height: 6px;
+  left: 12px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.vaccine-certfication .vector-Ri9xx9 {
+  background-color: transparent;
+  height: 20px;
+  left: -1px;
+  position: absolute;
+  top: 1px;
+  width: 20px;
+}
+.vaccine-certfication .vector-hxXIgf {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 10px;
+  position: relative;
+  width: 10px;
+}
+.vaccine-certfication .vector-mwbllv {
+  background-color: transparent;
+  height: 6px;
+  left: 4px;
+  position: absolute;
+  top: -1px;
+  width: 2px;
+}
+.vaccine-certfication .vector-oxiYxY {
+  background-color: transparent;
+  height: 2px;
+  left: -1px;
+  position: absolute;
+  top: 7px;
+  width: 20px;
+}
+.vaccine-certfication .vector-tQhKpJ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 23px;
+  margin-left: 3.82px;
+  margin-top: 10px;
+  position: relative;
+  transform: rotate(-90.00deg);
+  width: 60px;
+}
+.vaccine-certfication .vector-vJslbB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 20px;
+  margin-top: -1px;
+  position: relative;
+  width: 22px;
+}
+.vaccine-certfication .vector-xaJSzx {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 8px;
+  margin-left: 1px;
+  position: relative;
+  width: 5px;
+}

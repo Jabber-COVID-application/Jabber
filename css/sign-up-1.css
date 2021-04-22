@@ -1,0 +1,375 @@
+/* screen - sign-up-1 */
+
+.sign-up-1 {
+  align-items: flex-start;
+  background-color: var(--mercury);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 1024px;
+  justify-content: flex-start;
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 0 45px;
+  position: relative;
+  width: 1440px;
+}
+.sign-up-1 .already-have-an-account-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  margin-left: 100px;
+  margin-top: 41px;
+  min-height: 26px;
+  min-width: 208px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: auto;
+}
+.sign-up-1 .button-7sqllN {
+  align-items: center;
+  background-color: var(--roman-2);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 419px;
+  padding: 0 18px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .button-C61RwL {
+  align-items: center;
+  background-color: var(--roman-2);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 18px;
+  margin-top: 31px;
+  min-width: 108px;
+  padding: 0 18px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .button-aNko04 {
+  align-items: center;
+  background-color: var(--roman-2);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 419px;
+  padding: 0 18px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .button-sxNtRw {
+  align-items: center;
+  background-color: var(--roman-2);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 419px;
+  padding: 0 18px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .flex-col-C61RwL {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-top: -11px;
+  min-height: 685px;
+  position: relative;
+  width: 483px;
+}
+.sign-up-1 .frame-10-xt64qq {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-start;
+  margin-top: 16px;
+  min-width: 419px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .frame-11-xt64qq {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-start;
+  margin-top: 16px;
+  min-width: 419px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .frame-47-tiDznc {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-top: 24px;
+  min-height: 170px;
+  position: relative;
+  width: 419px;
+}
+.sign-up-1 .frame-48-5uV8KR {
+  align-items: flex-start;
+  align-self: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-top: 16px;
+  min-height: 214px;
+  position: relative;
+  width: 419px;
+}
+.sign-up-1 .frame-8-0xy0vn {
+  align-items: flex-end;
+  background-color: var(--alabaster);
+  border-radius: 32px;
+  box-shadow: 0px 2px 15px rgba(33,37,41,0.1);;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  margin-top: 237px;
+  min-height: 325px;
+  padding: 32px 30px;
+  position: relative;
+  width: 483px;
+}
+.sign-up-1 .frame-8-92jFkZ {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-start;
+  min-width: 419px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .frame-8-Pxa1x1 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-start;
+  min-width: 419px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .frame-8-xjjigT {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-start;
+  min-width: 419px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .frame-9-xt64qq {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 46px;
+  justify-content: flex-start;
+  min-width: 419px;
+  position: relative;
+  width: auto;
+}
+.sign-up-1 .group-1-L7nXNB {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 19px;
+  min-height: 60px;
+  position: absolute;
+  top: -19px;
+  transform: rotate(90.00deg);
+  width: 23px;
+}
+.sign-up-1 .group-2-y1HRxC {
+  background-color: transparent;
+  height: 44px;
+  left: 53px;
+  position: absolute;
+  top: 38px;
+  width: 62px;
+}
+.sign-up-1 .jabber-L7nXNB {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: auto;
+}
+.sign-up-1 .medium-i20551760277-xHxYv9 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  min-height: 26px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 70px;
+}
+.sign-up-1 .medium-i20556460277-Ypu85y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  min-height: 26px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 381px;
+}
+.sign-up-1 .medium-i20557160277-jvEbsr {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  min-height: 26px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 381px;
+}
+.sign-up-1 .medium-i20557560277-u14iS3 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.16px;
+  line-height: 26px;
+  min-height: 26px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 381px;
+}
+.sign-up-1 .overlap-group-0xy0vn {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 123px;
+  margin-left: 1.0px;
+  position: relative;
+  width: 166px;
+}
+.sign-up-1 .rectangle-1-zJ9z6y {
+  background-color: var(--bittersweet);
+  flex-shrink: 1;
+  height: 27px;
+  margin-left: -8.97px;
+  margin-top: -1376px;
+  position: relative;
+  width: 14px;
+}
+.sign-up-1 .rectangle-6-y1HRxC {
+  background-color: transparent;
+  height: 123px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 166px;
+}
+.sign-up-1 .sign-up-5uV8KR {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.48px;
+  line-height: 31px;
+  min-height: 31px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 421px;
+}
+.sign-up-1 .vector-zJ9z6y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 23px;
+  margin-left: 3.82px;
+  margin-top: 10px;
+  position: relative;
+  transform: rotate(-90.00deg);
+  width: 60px;
+}
+.sign-up-1 .what-kind-of-ac-do-you-require-tiDznc {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: auto;
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  min-height: 20px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 421px;
+}
