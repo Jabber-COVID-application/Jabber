@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>32</y>
-      <w>240</w>
-      <h>208</h>
+      <x>161</x>
+      <y>91</y>
+      <w>210</w>
+      <h>182</h>
     </coordinates>
     <panel_attributes>Jabber
 --
@@ -30,10 +30,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>304</y>
-      <w>240</w>
-      <h>296</h>
+      <x>385</x>
+      <y>329</y>
+      <w>210</w>
+      <h>259</h>
     </coordinates>
     <panel_attributes>User
 --
@@ -41,12 +41,14 @@
 -age:int
 -vaccinationPhase:int
 -state:string
--emailAddress:string
+-email:string
+-pwd:string
 -phoneNumber:int
 -JabberApp:Jabber
 -checkedIn{double time,string area}:Struct
 -pastCheckedIn[5000]checkedIn
-
+-type_of_user:string
+-certificateQR:string
 --
 +showProfile():void
 +changeProfile():void
@@ -56,7 +58,7 @@
 +setState():void
 +setPhoneNumber():void
 +setEmail():void
-
++logout():void
 
 </panel_attributes>
     <additional_attributes/>
@@ -64,10 +66,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>312</y>
-      <w>184</w>
-      <h>144</h>
+      <x>0</x>
+      <y>336</y>
+      <w>161</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -84,10 +86,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>304</x>
-      <y>152</y>
-      <w>96</w>
-      <h>176</h>
+      <x>91</x>
+      <y>196</y>
+      <w>84</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1..*
@@ -97,14 +99,82 @@ m2=1..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
-      <y>112</y>
-      <w>128</w>
-      <h>208</h>
+      <x>364</x>
+      <y>161</y>
+      <w>112</w>
+      <h>182</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1..*
 m2=1..1</panel_attributes>
     <additional_attributes>120.0;240.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>35</y>
+      <w>210</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Authentication
+--
+-email:string
+-pwd:string
+--
++register():void
++authenticate():boolean
++public_login():boolean
++health_carer_login():boolean
++contact_tracer_login():boolean
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>147</y>
+      <w>35</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+m2=1..1</panel_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>252</y>
+      <w>210</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>VaccineCertification
+--
+-QRcode:string
+-vaccinated:boolean
+--
++vaccinated():boolean
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>364</y>
+      <w>224</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..1</panel_attributes>
+    <additional_attributes>10.0;120.0;280.0;120.0;280.0;10.0</additional_attributes>
   </element>
 </diagram>
