@@ -1,15 +1,6 @@
-# First Project
-This code was generated using AnimaApp.com. 
-Anima allows teams to innovate faster by converting design to code, automatically.
+# Jabber COVID Application
 
-## Are you a developer?
-This code is a high-fidelity prototype.
-Get developer-friendly React or HTML/CSS code for this project at:
-https://projects.animaapp.com/team/kazi-mfdz0gb/project/8wxFk8G?utm_source=package-code
-You might need to request access.
+Please use care when making edits. Open Issues, and work off branches before submitting PR's to merge in your changes.
 
-## Got feedback?
-Feedback on code quality is welcome at code@animaapp.com.
-
-Have a creative day,
-Anima team
+When dealing with env and config files, there are example files with the structure set out. Contact me (Michael) to
+get the appropriate credentials to connect to the database and other services.

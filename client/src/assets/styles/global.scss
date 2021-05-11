@@ -1,0 +1,103 @@
+@use 'abstracts/colors';
+@use 'abstracts/fonts';
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,500,600");
+
+:root {
+  --bg-20: #{colors.$bg-20};
+  --bg-30: #{colors.$bg-30};
+  --bg-40: #{colors.$bg-40};
+  --bg-50: #{colors.$bg-50};
+  --bg-60: #{colors.$bg-60};
+  --bg-70: #{colors.$bg-70};
+  --bg-80: #{colors.$bg-80};
+  --bg-90: #{colors.$bg-90};
+  --bg-100: #{colors.$bg-100};
+  --bittersweet-80: #{colors.$bittersweet-80};
+  --bittersweet-90: #{colors.$bittersweet-90};
+  --bittersweet-100: #{colors.$bittersweet-100};
+  --bittersweet-110: #{colors.$bittersweet-110};
+  --bittersweet-120: #{colors.$bittersweet-120};
+  --small-shadow: #{colors.$small-shadow};
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-40);
+  font-family: 'Montserrat', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 16px;
+  line-height: 1.625em;
+  font-style: normal;
+  font-weight: 600;
+  vertical-align: middle;
+  color: var(--bg-100);
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+}
+
+.h1,
+h1 {
+  @include fonts.h1;
+}
+
+.h2,
+h2 {
+  @include fonts.h2;
+}
+
+.h3,
+h3 {
+  @include fonts.h3;
+}
+
+.h4,
+h4 {
+  @include fonts.h4;
+}
+
+.h5,
+h5 {
+  @include fonts.h5;
+}
+
+.h6,
+h6 {
+  @include fonts.h6;
+}
+
+.callout {
+  @include fonts.callout;
+}
+
+.subhead {
+  @include fonts.subhead;
+}
+
+.caption {
+  @include fonts.caption;
+}
+
+.label {
+  @include fonts.label;
+}
+
+strong,
+.bold {
+  @include fonts.bold;
+}
+
+.medium {
+  @include fonts.medium;
+}
+
+.regular {
+  @include fonts.regular;
+}

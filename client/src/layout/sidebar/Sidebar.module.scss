@@ -1,0 +1,46 @@
+@use '../../assets/styles/abstracts/fonts';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 64px;
+  background: var(--bg-30);
+  box-shadow: var(--small-shadow);
+  transition: width 0.2s ease;
+
+  &:hover {
+    width: 256px;
+  }
+
+  .logo {
+    width: 128px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 30px;
+    box-shadow: var(--small-shadow);
+    background: var(--bg-20);
+
+    svg {
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  .toolbar {
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px 14px;
+    box-sizing: border-box;
+  }
+
+  .upper,
+  .lower {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
