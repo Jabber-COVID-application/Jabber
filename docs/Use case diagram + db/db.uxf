@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>240</y>
+      <w>126</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>User
+--
+USERNAME  		                   ID
+FNAME
+LNAME
+DOB
+LIVING_ADDRESS
+PHONE
+USERTYPE
+EMAIL
+PASSWORD
+ELIGIBILITY{...}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>450</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VaccinationRollout
+--
+USERNAME           ID   FK	
+ADDRESS           FK
+DATE    
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>60</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VaccinationCertificate
+--
+QRCODE                  ID
+REFERENCECODE            ID2
+USERNAME                     FK 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>168</y>
+      <w>30</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has </panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>366</y>
+      <w>30</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has </panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>276</x>
+      <y>252</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VisitLocation
+--
+ADDRESS                     ID  FK
+USERNAME                        FK
+QRCODE  
+DATE  
+V1_CITIME
+V1_COTIME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>300</y>
+      <w>114</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0....*
+m2=1
+&lt; makes</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>342</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Location
+--
+ADDRESS               ID
+DAILYCASE  
+SUBURB
+CITY
+STATE
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>318</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;100.0;130.0;100.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>390</y>
+      <w>276</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;440.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>258</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VaccinationPhase
+--
+USERNAME           ID   FK
+PHASE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>618</x>
+      <y>300</y>
+      <w>96</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has </panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
