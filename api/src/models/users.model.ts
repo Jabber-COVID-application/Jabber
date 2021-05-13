@@ -19,7 +19,7 @@ import { User, UserType } from '@interfaces/users.interface';
  *  address2
  *  city
  *  postCode
- *  state
+ *  store
  *
  * medical (protected, optional)
  *  conditions[]
@@ -43,7 +43,7 @@ const userDetails: Schema = new Schema({
   dateOfBirth: {
     type: Date,
     required: true,
-  }
+  },
 });
 
 const userAddress: Schema = new Schema({
@@ -94,7 +94,7 @@ const userSchema: Schema = new Schema({
   address: {
     type: userAddress,
     required: false,
-  }
+  },
 });
 
 const userModel = model<User & Document>('User', userSchema);
