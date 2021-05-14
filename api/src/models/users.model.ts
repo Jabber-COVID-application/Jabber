@@ -19,7 +19,7 @@ import { User, UserType } from '@interfaces/users.interface';
  *  address2
  *  city
  *  postCode
- *  state
+ *  store
  *
  * medical (protected, optional)
  *  conditions[]
@@ -43,17 +43,14 @@ const userDetails: Schema = new Schema({
   dateOfBirth: {
     type: Date,
     required: true,
-  }
+  },
 });
 
-const userAddress: Schema = new Schema({
-  address1: {
+const location: Schema = new Schema({
+  address: {
     type: String,
+    unique:true,
     required: true,
-  },
-  address2: {
-    type: String,
-    required: false,
   },
   city: {
     type: String,
@@ -92,11 +89,36 @@ const userSchema: Schema = new Schema({
     required: false,
   },
   address: {
-    type: userAddress,
+    type: location,
     required: false,
+  },
+});
+
+const visitLocation: Schema = new Schema({
+  address:{
+    type: location,
+    unique:true,
+    required:true,
+  },
+  QRCODE:{
+    type:String,
+    required:true,
+  },
+  Date:{
+    type:Date,
+    required:true,
+  },
+  Checkin:{
+    type:Date,
+    required:true,
+  },
+  Checkout:{
+    type:Date,
+    required:true,
   }
 });
 
 const userModel = model<User & Document>('User', userSchema);
-
+const locationModel = model<User & Document>('Location', location);
+const visitLocationModel = model<User & Document>('visitLocation', visitLocation);
 export default userModel;
