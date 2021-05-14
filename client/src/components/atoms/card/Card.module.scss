@@ -1,0 +1,34 @@
+@use '../../../assets/styles/abstracts/colors';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: colors.$bg-20;
+  box-shadow: colors.$small-shadow;
+  max-width: 420px;
+  width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-align: center;
+  }
+
+  &.single {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+
+  &.packed {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+}
