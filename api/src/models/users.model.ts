@@ -19,15 +19,17 @@ import { User, UserType } from '@interfaces/users.interface';
  *  address2
  *  city
  *  postCode
- *  store
+ *  state
  *
  * medical (protected, optional)
  *  conditions[]
  *  medications[]
  *
+ * visitedLocations[]
+ *
  */
 
-const userDetails: Schema = new Schema({
+const UserDetailsSchema: Schema = new Schema({
   firstName: {
     type: String,
     required: true,
@@ -46,11 +48,14 @@ const userDetails: Schema = new Schema({
   },
 });
 
-const location: Schema = new Schema({
-  address: {
+const LocationSchema: Schema = new Schema({
+  address1: {
     type: String,
-    unique:true,
     required: true,
+  },
+  address2: {
+    type: String,
+    required: false,
   },
   city: {
     type: String,
@@ -66,7 +71,22 @@ const location: Schema = new Schema({
   },
 });
 
-const userSchema: Schema = new Schema({
+const VisitSchema: Schema = new Schema({
+  venue: {
+    type: Schema.Types.ObjectId,
+    required: true,
+  },
+  checkin: {
+    type: Date,
+    required: true,
+  },
+  checkout: {
+    type: Date,
+    required: false,
+  },
+});
+
+const UserSchema: Schema = new Schema({
   email: {
     type: String,
     required: true,
@@ -85,40 +105,19 @@ const userSchema: Schema = new Schema({
     required: true,
   },
   userDetails: {
-    type: userDetails,
+    type: UserDetailsSchema,
     required: false,
   },
   address: {
-    type: location,
+    type: LocationSchema,
+    required: false,
+  },
+  visits: {
+    type: [VisitSchema],
     required: false,
   },
 });
 
-const visitLocation: Schema = new Schema({
-  address:{
-    type: location,
-    unique:true,
-    required:true,
-  },
-  QRCODE:{
-    type:String,
-    required:true,
-  },
-  Date:{
-    type:Date,
-    required:true,
-  },
-  Checkin:{
-    type:Date,
-    required:true,
-  },
-  Checkout:{
-    type:Date,
-    required:true,
-  }
-});
+const User = model<User & Document>('User', UserSchema);
 
-const userModel = model<User & Document>('User', userSchema);
-const locationModel = model<User & Document>('Location', location);
-const visitLocationModel = model<User & Document>('visitLocation', visitLocation);
-export default userModel;
+export default User;
