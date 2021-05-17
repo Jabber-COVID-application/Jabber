@@ -4,6 +4,7 @@ import request from 'supertest';
 import App from '@/app';
 import { CreateUserDto } from '@dtos/users.dto';
 import AuthRoute from '@routes/auth.route';
+import { UserType } from '@interfaces/users.interface';
 
 afterAll(async () => {
   await new Promise<void>(resolve => setTimeout(() => resolve(), 500));
@@ -15,6 +16,7 @@ describe('Testing Auth', () => {
       const userData: CreateUserDto = {
         email: 'test@email.com',
         password: 'q1w2e3r4!',
+        type: UserType.GENERAL,
       };
 
       const authRoute = new AuthRoute();
@@ -38,6 +40,7 @@ describe('Testing Auth', () => {
       const userData: CreateUserDto = {
         email: 'test@email.com',
         password: 'q1w2e3r4!',
+        type: UserType.GENERAL,
       };
 
       const authRoute = new AuthRoute();

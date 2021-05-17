@@ -25,9 +25,11 @@ import { User, UserType } from '@interfaces/users.interface';
  *  conditions[]
  *  medications[]
  *
+ * visitedLocations[]
+ *
  */
 
-const userDetails: Schema = new Schema({
+const UserDetailsSchema: Schema = new Schema({
   firstName: {
     type: String,
     required: true,
@@ -46,7 +48,7 @@ const userDetails: Schema = new Schema({
   },
 });
 
-const userAddress: Schema = new Schema({
+const LocationSchema: Schema = new Schema({
   address1: {
     type: String,
     required: true,
@@ -69,7 +71,22 @@ const userAddress: Schema = new Schema({
   },
 });
 
-const userSchema: Schema = new Schema({
+const VisitSchema: Schema = new Schema({
+  venue: {
+    type: Schema.Types.ObjectId,
+    required: true,
+  },
+  checkin: {
+    type: Date,
+    required: true,
+  },
+  checkout: {
+    type: Date,
+    required: false,
+  },
+});
+
+const UserSchema: Schema = new Schema({
   email: {
     type: String,
     required: true,
@@ -88,15 +105,15 @@ const userSchema: Schema = new Schema({
     required: true,
   },
   userDetails: {
-    type: userDetails,
+    type: UserDetailsSchema,
     required: false,
   },
   address: {
-    type: userAddress,
+    type: LocationSchema,
     required: false,
   },
 });
 
-const userModel = model<User & Document>('User', userSchema);
+const User = model<User & Document>('User', UserSchema);
 
-export default userModel;
+export default User;

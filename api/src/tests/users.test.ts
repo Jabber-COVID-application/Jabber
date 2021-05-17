@@ -4,6 +4,7 @@ import request from 'supertest';
 import App from '@/app';
 import { CreateUserDto } from '@dtos/users.dto';
 import UsersRoute from '@routes/users.route';
+import { UserType } from '@interfaces/users.interface';
 
 afterAll(async () => {
   await new Promise<void>(resolve => setTimeout(() => resolve(), 500));
@@ -63,6 +64,7 @@ describe('Testing Users', () => {
       const userData: CreateUserDto = {
         email: 'test@email.com',
         password: 'q1w2e3r4',
+        type: UserType.GENERAL,
       };
 
       const usersRoute = new UsersRoute();
@@ -87,6 +89,7 @@ describe('Testing Users', () => {
       const userData: CreateUserDto = {
         email: 'test@email.com',
         password: 'q1w2e3r4',
+        type: UserType.GENERAL,
       };
 
       const usersRoute = new UsersRoute();

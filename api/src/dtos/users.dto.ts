@@ -1,5 +1,5 @@
 import { IsEmail, IsString } from 'class-validator';
-import {UserAddress, UserDetails, UserType} from "@interfaces/users.interface";
+import { Location, UserDetails, UserType } from '@interfaces/users.interface';
 
 export class CreateUserDto {
   @IsEmail()
@@ -11,7 +11,7 @@ export class CreateUserDto {
   @IsString()
   public type: UserType;
 
-  public userDetails: UserDetails;
+  public userDetails?: UserDetails;
 
-  public userAddress: UserAddress;
+  public userAddress?: Location;
 }

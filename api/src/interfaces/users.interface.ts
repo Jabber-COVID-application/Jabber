@@ -1,10 +1,10 @@
-import {Schema} from "mongoose";
+import { ObjectId } from 'mongoose';
 
 export enum UserType {
-  GENERAL = "GENERAL",
-  VENUE_ADMIN = "VENUE_ADMIN",
-  VACCINE_ADMIN = "VACCINE_ADMIN",
-  SUPER_ADMIN = "SUPER_ADMIN",
+  GENERAL = 'GENERAL',
+  VENUE_ADMIN = 'VENUE_ADMIN',
+  VACCINE_ADMIN = 'VACCINE_ADMIN',
+  SUPER_ADMIN = 'SUPER_ADMIN',
 }
 
 export interface User {
@@ -14,9 +14,9 @@ export interface User {
   type: UserType;
   active: boolean;
   userDetails?: UserDetails;
-  userAddress?: UserAddress;
+  userAddress?: Location;
+  visits?: Visit[];
 }
-
 
 export interface UserDetails {
   firstName: string;
@@ -25,10 +25,16 @@ export interface UserDetails {
   dateOfBirth: Date;
 }
 
-export interface UserAddress {
+export interface Location {
   address1: string;
   address2?: string;
   city: string;
   postCode: string;
   state: string;
+}
+
+export interface Visit {
+  venue: ObjectId;
+  checkin: Date;
+  checkout: Date;
 }
