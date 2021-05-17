@@ -1,17 +1,16 @@
-import {AxiosInstance} from "axios";
-import { RootState } from "./root";
-import {makeAutoObservable} from "mobx";
+import { AxiosInstance } from "axios";
+import { RootStore } from "./root";
+import { makeAutoObservable } from "mobx";
 
-export class UserState {
-  root: RootState;
+export class UserStore {
+  root: RootStore;
   transportLayer: AxiosInstance;
 
   firstName: string = "Michael";
   lastName: string = "Kilbane";
   dateOfBirth: number = NaN;
 
-
-  constructor(root: RootState, transportLayer: AxiosInstance) {
+  constructor(root: RootStore, transportLayer: AxiosInstance) {
     makeAutoObservable(this);
 
     this.root = root;

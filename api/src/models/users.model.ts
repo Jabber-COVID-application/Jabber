@@ -19,7 +19,7 @@ import { User, UserType } from '@interfaces/users.interface';
  *  address2
  *  city
  *  postCode
- *  state
+ *  store
  *
  * medical (protected, optional)
  *  conditions[]
@@ -110,10 +110,6 @@ const UserSchema: Schema = new Schema({
   },
   address: {
     type: LocationSchema,
-    required: false,
-  },
-  visits: {
-    type: [VisitSchema],
     required: false,
   },
 });

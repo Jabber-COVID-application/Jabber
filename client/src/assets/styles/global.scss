@@ -101,3 +101,10 @@ strong,
 .regular {
   @include fonts.regular;
 }
+
+
+// Forms
+
+form {
+  display: contents;
+}
