@@ -19,7 +19,7 @@ import { User, UserType } from '@interfaces/users.interface';
  *  address2
  *  city
  *  postCode
- *  store
+ *  state
  *
  * medical (protected, optional)
  *  conditions[]
@@ -29,62 +29,71 @@ import { User, UserType } from '@interfaces/users.interface';
  *
  */
 
-const UserDetailsSchema: Schema = new Schema({
-  firstName: {
-    type: String,
-    required: true,
+const UserDetailsSchema: Schema = new Schema(
+  {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    middleName: {
+      type: String,
+      required: false,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
   },
-  middleName: {
-    type: String,
-    required: false,
-  },
-  lastName: {
-    type: String,
-    required: true,
-  },
-  dateOfBirth: {
-    type: Date,
-    required: true,
-  },
-});
+  { _id: false },
+);
 
-const LocationSchema: Schema = new Schema({
-  address1: {
-    type: String,
-    required: true,
+const LocationSchema: Schema = new Schema(
+  {
+    address1: {
+      type: String,
+      required: true,
+    },
+    address2: {
+      type: String,
+      required: false,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    postCode: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
   },
-  address2: {
-    type: String,
-    required: false,
-  },
-  city: {
-    type: String,
-    required: true,
-  },
-  postCode: {
-    type: String,
-    required: true,
-  },
-  state: {
-    type: String,
-    required: true,
-  },
-});
+  { _id: false },
+);
 
-const VisitSchema: Schema = new Schema({
-  venue: {
-    type: Schema.Types.ObjectId,
-    required: true,
+const VisitSchema: Schema = new Schema(
+  {
+    venue: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    checkin: {
+      type: Date,
+      required: true,
+    },
+    checkout: {
+      type: Date,
+      required: false,
+    },
   },
-  checkin: {
-    type: Date,
-    required: true,
-  },
-  checkout: {
-    type: Date,
-    required: false,
-  },
-});
+  { _id: false },
+);
 
 const UserSchema: Schema = new Schema({
   email: {
@@ -110,6 +119,10 @@ const UserSchema: Schema = new Schema({
   },
   address: {
     type: LocationSchema,
+    required: false,
+  },
+  visits: {
+    type: [VisitSchema],
     required: false,
   },
 });

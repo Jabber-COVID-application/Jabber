@@ -1,27 +1,43 @@
-import { AxiosInstance } from "axios";
 import { RootStore } from "./root";
 import { makeAutoObservable } from "mobx";
+import {
+  User,
+  UserDetails,
+  UserType,
+  Visit,
+  Location,
+} from "../types/user.types";
 
 export class UserStore {
   root: RootStore;
-  transportLayer: AxiosInstance;
 
-  firstName: string = "Michael";
-  lastName: string = "Kilbane";
-  dateOfBirth: number = NaN;
+  id?: string;
+  email?: string;
+  type?: UserType;
 
-  constructor(root: RootStore, transportLayer: AxiosInstance) {
+  userDetails?: UserDetails;
+  userAddress?: Location;
+
+  visits?: Visit[];
+
+  constructor(root: RootStore) {
     makeAutoObservable(this);
 
     this.root = root;
-    this.transportLayer = transportLayer;
   }
 
-  get fullName(): string {
-    return `${this.firstName} ${this.lastName}`;
+  populate(user: User) {
+    if (user._id) this.id = user._id;
+    if (user.email) this.email = user.email;
+    if (user.type) this.type = user.type;
+    if (user.userDetails) this.userDetails = user.userDetails;
+    if (user.userAddress) this.userAddress = user.userAddress;
+    if (user.visits) this.visits = user.visits;
   }
 
-  set setFirstName(firstName: string) {
-    this.firstName = firstName;
+  get fullName() {
+    return `${this.userDetails?.firstName || ""} ${
+      this.userDetails?.lastName || ""
+    }`;
   }
 }

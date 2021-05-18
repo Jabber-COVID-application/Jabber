@@ -1,53 +1,74 @@
 import React, { ForwardedRef } from "react";
 import styles from "./Input.module.scss";
-import { ChangeHandler } from "react-hook-form";
+import {
+  ChangeHandler,
+  Control,
+  RegisterOptions,
+  useController,
+} from "react-hook-form";
 
 interface Props {
   name: string;
-  type?: string;
-  value?: string;
-  placeholder?: string;
+  control: Control;
+  rules?: RegisterOptions;
+  defaultValue?: string;
+
   label?: string;
-  onChange: ChangeHandler;
-  onBlur?: ChangeHandler;
-  error?: boolean;
+  type?: string;
+  placeholder?: string;
+
   disabled?: boolean;
   className?: string;
 }
 
-const Input = React.forwardRef(
-  (props: Props, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
-    const {
-      name,
-      type = "text",
-      placeholder,
-      label,
-      onChange,
-      onBlur,
-      error = false,
-      disabled = false,
-      className = "",
-    } = props;
+const Input = (props: Props): JSX.Element => {
+  const {
+    name,
+    control,
+    rules = {},
+    defaultValue = "",
 
-    return (
-      <div className={styles.input}>
+    label,
+    type = "text",
+    placeholder,
+
+    disabled = false,
+    className = "",
+  } = props;
+
+  const {
+    field: { ref, ...inputProps },
+    fieldState: { invalid, error, isTouched, isDirty },
+    formState: { touchedFields, dirtyFields, isSubmitting },
+  } = useController({
+    name,
+    control,
+    rules,
+    defaultValue,
+  });
+
+  return (
+    <div className={styles.input}>
+      <div className={styles.above}>
         {label && <label htmlFor={name}>{label}</label>}
-        <input
-          ref={ref}
-          type={type}
-          name={name}
-          onChange={onChange}
-          onBlur={onBlur}
-          placeholder={placeholder || ""}
-          className={`
-          ${error ? styles.error : ""}
-          ${disabled ? styles.disabled : ""}
+        <p className={`${styles.errorMessage} ${error ? styles.visible : ""}`}>
+          {error?.message}
+        </p>
+      </div>
+
+      <input
+        ref={ref}
+        type={type}
+        placeholder={placeholder || ""}
+        className={`
+          ${invalid || error ? styles.error : ""}
+          ${disabled || isSubmitting ? styles.disabled : ""}
           ${className}
         `}
-        />
-      </div>
-    );
-  }
-);
+        {...inputProps}
+      />
+    </div>
+  );
+};
 
 export default Input;
