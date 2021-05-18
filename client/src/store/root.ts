@@ -1,18 +1,18 @@
 import { makeAutoObservable } from "mobx";
-import axios, { AxiosInstance } from "axios";
 import { UserStore } from "./user";
+import { AuthStore } from "./auth";
+import { SidebarStore } from "./sidebar";
 
 export class RootStore {
   user: UserStore;
-  transportLayer: AxiosInstance;
+  auth: AuthStore;
+  sidebar: SidebarStore;
 
   constructor() {
     makeAutoObservable(this);
 
-    this.transportLayer = axios.create({
-      baseURL: process.env.API_URL,
-    });
-
-    this.user = new UserStore(this, this.transportLayer);
+    this.user = new UserStore(this);
+    this.auth = new AuthStore(this);
+    this.sidebar = new SidebarStore(this);
   }
 }
