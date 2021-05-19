@@ -51,7 +51,7 @@ const UserDetailsSchema: Schema = new Schema(
   { _id: false },
 );
 
-const LocationSchema: Schema = new Schema(
+const Location: Schema = new Schema(
   {
     address1: {
       type: String,
@@ -77,7 +77,7 @@ const LocationSchema: Schema = new Schema(
   { _id: false },
 );
 
-const VisitSchema: Schema = new Schema(
+const Visit: Schema = new Schema(
   {
     venue: {
       type: Schema.Types.ObjectId,
@@ -118,11 +118,11 @@ const UserSchema: Schema = new Schema({
     required: false,
   },
   address: {
-    type: LocationSchema,
+    type: Location,
     required: false,
   },
   visits: {
-    type: [VisitSchema],
+    type: [Visit],
     required: false,
   },
 });
