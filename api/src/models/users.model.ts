@@ -127,6 +127,8 @@ const UserSchema: Schema = new Schema({
   },
 });
 
-const User = model<User & Document>('User', UserSchema);
+const userModel = model<User & Document>('User', userSchema);
+const locationModel = model<User & Document>('Location', location);//location model
+const visitLocationModel = model<User & Document>('visitLocation', visitLocation);//visit location model
+export default userModel;
 
-export default User;
