@@ -119,6 +119,6 @@ const visitLocation: Schema = new Schema({
 });
 
 const userModel = model<User & Document>('User', userSchema);
-const locationModel = model<User & Document>('Location', location);
-const visitLocationModel = model<User & Document>('visitLocation', visitLocation);
+const locationModel = model<User & Document>('Location', location);//location model
+const visitLocationModel = model<User & Document>('visitLocation', visitLocation);//visit location model
 export default userModel;
