@@ -42,10 +42,13 @@
       &.avatar {
         box-sizing: border-box;
         border: 3px solid var(--bg-90);
+        transition: filter 0.4s ease;
       }
 
       img {
         object-fit: cover;
+        width: 36px;
+        height: 36px;
       }
 
       svg {
@@ -63,6 +66,10 @@
     button {
       .icon {
         background: var(--bg-50);
+
+        &.avatar {
+          filter: brightness(90%);
+        }
       }
     }
   }

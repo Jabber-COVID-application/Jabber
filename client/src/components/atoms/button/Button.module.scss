@@ -13,7 +13,7 @@
   transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
 
   &.small {
-    @include fonts.subhead;
+    @include fonts.callout;
     @include fonts.medium;
 
     padding: 0.625rem 1.25rem;

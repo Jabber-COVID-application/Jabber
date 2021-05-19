@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Sidebar.module.scss";
 import { ReactComponent as Logo } from "../../../assets/svgs/logo.svg";
 import DashboardIcon from "../../../assets/svgs/dashboard.svg";
@@ -8,10 +8,10 @@ import SidebarItem from "./sidebar-item/SidebarItem";
 import { observer } from "mobx-react";
 import { useStore } from "../../../store";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 interface SidebarItem {
-  name: string;
+  path: string;
   icon: string;
   text: string;
   action?: () => void;
@@ -19,28 +19,39 @@ interface SidebarItem {
 
 const Sidebar = observer(
   (): JSX.Element => {
-    const {
-      user,
-      auth,
-      sidebar: { selected },
-    } = useStore();
+    const { user, auth } = useStore();
 
     const history = useHistory();
+    const location = useLocation();
+
+    const [selected, setSelected] = useState<string>("");
 
     const [sidebarItems] = useState<SidebarItem[]>([
       {
-        name: "dashboard",
+        path: "/dashboard",
         icon: DashboardIcon,
         text: "Dashboard",
         action: () => history.push("/dashboard"),
       },
       {
-        name: "rollout",
+        path: "/rollout",
         icon: RolloutIcon,
         text: "Rollout",
         action: () => history.push("/rollout"),
       },
     ]);
+
+    useEffect(() => {
+      const path = location.pathname;
+
+      setSelected("");
+
+      sidebarItems.forEach((item) => {
+        if (path.startsWith(item.path)) setSelected(item.path);
+      });
+
+      if (path.startsWith("/profile")) setSelected("/profile");
+    }, [location]);
 
     return (
       <aside className={styles.sidebar}>
@@ -52,8 +63,8 @@ const Sidebar = observer(
           <div className={styles.upper}>
             {sidebarItems.map((item) => (
               <SidebarItem
-                key={item.name}
-                selected={selected === item.name}
+                key={item.path}
+                selected={selected === item.path}
                 type="icon"
                 {...item}
               />
@@ -65,7 +76,7 @@ const Sidebar = observer(
               icon={UserIcon}
               text={user.fullName || ""}
               type="avatar"
-              selected={selected === "profile"}
+              selected={selected === "/profile"}
               action={() => auth.logout()}
             />
           </div>
