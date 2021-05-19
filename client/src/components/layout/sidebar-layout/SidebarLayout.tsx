@@ -1,10 +1,10 @@
 import React, { PropsWithChildren } from "react";
 import Sidebar from "../sidebar/Sidebar";
-import styles from "./FullLayout.module.scss";
+import styles from "./SidebarLayout.module.scss";
 
 interface Props {}
 
-const FullLayout = (props: PropsWithChildren<Props>): JSX.Element => {
+const SidebarLayout = (props: PropsWithChildren<Props>): JSX.Element => {
   const { children } = props;
 
   return (
@@ -15,4 +15,4 @@ const FullLayout = (props: PropsWithChildren<Props>): JSX.Element => {
   );
 };
 
-export default FullLayout;
+export default SidebarLayout;

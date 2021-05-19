@@ -3,7 +3,7 @@ import Navbar from "../../components/layout/navbar/Navbar";
 import Card from "../../components/atoms/card/Card";
 import Input from "../../components/atoms/input/Input";
 import Button from "../../components/atoms/button/Button";
-import SingleLayout from "../../components/layout/single-layout/SingleLayout";
+import NavbarLayout from "../../components/layout/navbar-layout/NavbarLayout";
 import { useForm } from "react-hook-form";
 import styles from "./Login.module.scss";
 import { useStore } from "../../store";
@@ -12,6 +12,8 @@ import { observer } from "mobx-react";
 import * as yup from "yup";
 import YupPassword from "yup-password";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Column from "../../components/atoms/column/Column";
+import Content from "../../components/atoms/content/Content";
 
 YupPassword(yup);
 
@@ -38,30 +40,34 @@ const Login = observer(
     const onSubmit = handleSubmit((data: LoginRequest) => auth.login(data));
 
     return (
-      <SingleLayout nav={<Navbar type="signup" />}>
-        <Card>
-          <h4>Login</h4>
+      <NavbarLayout nav={<Navbar type="signup" />}>
+        <Content centered>
+          <Column width={1 / 2}>
+            <Card>
+              <h4>Login</h4>
 
-          <form onSubmit={onSubmit}>
-            <Input label="Email" name="email" control={control} />
+              <form onSubmit={onSubmit}>
+                <Input label="Email" name="email" control={control} />
 
-            <Input
-              label="Password"
-              name="password"
-              type="password"
-              control={control}
-            />
+                <Input
+                  label="Password"
+                  name="password"
+                  type="password"
+                  control={control}
+                />
 
-            <Button
-              type="submit"
-              className={styles.submitButton}
-              disabled={isSubmitting}
-            >
-              Submit
-            </Button>
-          </form>
-        </Card>
-      </SingleLayout>
+                <Button
+                  type="submit"
+                  className={styles.submitButton}
+                  disabled={isSubmitting}
+                >
+                  Submit
+                </Button>
+              </form>
+            </Card>
+          </Column>
+        </Content>
+      </NavbarLayout>
     );
   }
 );

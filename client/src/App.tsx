@@ -7,7 +7,7 @@ import Signup from "./pages/signup/Signup";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { observer } from "mobx-react";
 import Rollout from "./pages/rollout/Rollout";
-import FullLayout from "./components/layout/full-layout/FullLayout";
+import SidebarLayout from "./components/layout/sidebar-layout/SidebarLayout";
 
 const App = observer(
   (): JSX.Element => {
@@ -16,13 +16,13 @@ const App = observer(
     return (
       <BrowserRouter>
         {auth.isAuthenticated ? (
-          <FullLayout>
+          <SidebarLayout>
             <Switch>
               <Route path="/dashboard" component={Dashboard} exact />
               <Route path="/rollout" component={Rollout} exact />
               <Redirect to="/dashboard" />
             </Switch>
-          </FullLayout>
+          </SidebarLayout>
         ) : (
           <Switch>
             <Route path="/login" component={Login} exact />

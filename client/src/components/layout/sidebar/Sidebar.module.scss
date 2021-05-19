@@ -1,6 +1,7 @@
 @use '../../../assets/styles/abstracts/fonts';
 
 .sidebar {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   width: 64px;

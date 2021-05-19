@@ -1,0 +1,9 @@
+@use "../../../../assets/styles/abstracts/colors";
+@use "../../../../assets/styles/abstracts/fonts";
+
+.text {
+  @include fonts.callout;
+  @include fonts.regular;
+
+  color: colors.$bg-100;
+}
