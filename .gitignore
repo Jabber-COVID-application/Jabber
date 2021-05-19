@@ -12,6 +12,12 @@
 
 /.idea
 
+# Client files
+
+# .env
+
+/client/.env
+
 # API files
 
 # Logs

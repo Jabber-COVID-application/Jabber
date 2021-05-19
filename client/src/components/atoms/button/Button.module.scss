@@ -1,0 +1,64 @@
+@use '../../../assets/styles/abstracts/colors';
+@use '../../../assets/styles/abstracts/fonts';
+@use 'sass:color';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: colors.$bittersweet-110;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+
+  &.small {
+    @include fonts.subhead;
+    @include fonts.medium;
+
+    padding: 0.625rem 1.25rem;
+  }
+
+  &.medium {
+    @include fonts.h6;
+    @include fonts.medium;
+
+    padding: 0.625rem 1.25rem;
+  }
+
+  &.large {
+    @include fonts.h5;
+    @include fonts.medium;
+
+    padding: 1rem 1.5rem;
+  }
+
+  &.default {
+    color: colors.$bg-20;
+    background: colors.$bittersweet-110;
+    border: 2px solid colors.$bittersweet-110;
+
+    &:hover {
+      color: colors.$bittersweet-110;
+      background: color.adjust(colors.$bittersweet-110, $alpha: -0.9);
+    }
+  }
+
+  &.outline {
+    color: colors.$bittersweet-110;
+    background: color.adjust(colors.$bittersweet-110, $alpha: -0.9);
+    border: 2px solid colors.$bittersweet-110;
+
+    &:hover {
+      color: colors.$bg-20;
+      background: colors.$bittersweet-110;
+    }
+  }
+
+  &:disabled {
+    color: colors.$bg-80;
+    background: colors.$bg-60;
+    border: 2px solid colors.$bg-60;
+    cursor: default;
+  }
+}

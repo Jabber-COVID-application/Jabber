@@ -1,0 +1,57 @@
+@use '../../../assets/styles/abstracts/colors';
+@use '../../../assets/styles/abstracts/fonts';
+
+.navbar {
+  width: 100%;
+  height: 96px;
+  position: relative;
+
+  .overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+
+    .logo {
+      width: 128px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      box-shadow: var(--small-shadow);
+      background: var(--bg-20);
+
+      svg {
+        width: 60px;
+        height: auto;
+      }
+    }
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+    box-sizing: border-box;
+    padding: 0 2rem;
+
+    .left,
+    .right {
+      display: flex;
+      align-items: center;
+
+      p {
+        @include fonts.regular;
+
+        color: colors.$bg-80;
+        padding-right: 1.25rem;
+      }
+    }
+  }
+}

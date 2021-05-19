@@ -19,54 +19,83 @@ import { User, UserType } from '@interfaces/users.interface';
  *  address2
  *  city
  *  postCode
- *  store
+ *  state
  *
  * medical (protected, optional)
  *  conditions[]
  *  medications[]
  *
+ * visitedLocations[]
+ *
  */
 
-const userDetails: Schema = new Schema({
-  firstName: {
-    type: String,
-    required: true,
+const UserDetailsSchema: Schema = new Schema(
+  {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    middleName: {
+      type: String,
+      required: false,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
   },
-  middleName: {
-    type: String,
-    required: false,
-  },
-  lastName: {
-    type: String,
-    required: true,
-  },
-  dateOfBirth: {
-    type: Date,
-    required: true,
-  },
-});
+  { _id: false },
+);
 
-const location: Schema = new Schema({
-  address: {
-    type: String,
-    unique:true,
-    required: true,
+const LocationSchema: Schema = new Schema(
+  {
+    address1: {
+      type: String,
+      required: true,
+    },
+    address2: {
+      type: String,
+      required: false,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    postCode: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
   },
-  city: {
-    type: String,
-    required: true,
-  },
-  postCode: {
-    type: String,
-    required: true,
-  },
-  state: {
-    type: String,
-    required: true,
-  },
-});
+  { _id: false },
+);
 
-const userSchema: Schema = new Schema({
+const VisitSchema: Schema = new Schema(
+  {
+    venue: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    checkin: {
+      type: Date,
+      required: true,
+    },
+    checkout: {
+      type: Date,
+      required: false,
+    },
+  },
+  { _id: false },
+);
+
+const UserSchema: Schema = new Schema({
   email: {
     type: String,
     required: true,
@@ -85,40 +114,21 @@ const userSchema: Schema = new Schema({
     required: true,
   },
   userDetails: {
-    type: userDetails,
+    type: UserDetailsSchema,
     required: false,
   },
   address: {
-    type: location,
+    type: LocationSchema,
     required: false,
   },
-});
-
-const visitLocation: Schema = new Schema({
-  address:{
-    type: location,
-    unique:true,
-    required:true,
+  visits: {
+    type: [VisitSchema],
+    required: false,
   },
-  QRCODE:{
-    type:String,
-    required:true,
-  },
-  Date:{
-    type:Date,
-    required:true,
-  },
-  Checkin:{
-    type:Date,
-    required:true,
-  },
-  Checkout:{
-    type:Date,
-    required:true,
-  }
 });
 
 const userModel = model<User & Document>('User', userSchema);
 const locationModel = model<User & Document>('Location', location);//location model
 const visitLocationModel = model<User & Document>('visitLocation', visitLocation);//visit location model
 export default userModel;
+
