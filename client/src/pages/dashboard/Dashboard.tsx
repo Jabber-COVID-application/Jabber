@@ -1,17 +1,15 @@
 import React from "react";
-
 import Card from "../../components/atoms/card/Card";
 import Column from "../../components/atoms/column/Column";
 import RolloutEstimateModule from "./modules/rollout-estimate/RolloutEstimateModule";
 import Content from "../../components/atoms/content/Content";
+import QuickStatsModule from "./modules/quick-stats/QuickStatsModule";
 
 const Dashboard = (): JSX.Element => {
   return (
     <Content>
       <Column width={2 / 3}>
-        <Card size="packed" label="Quick Stats">
-          <h4>Login</h4>
-        </Card>
+        <QuickStatsModule />
         <Card size="packed" label="Quick Stats">
           <h4>Login</h4>
         </Card>
