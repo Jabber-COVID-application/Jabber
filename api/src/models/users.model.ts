@@ -51,7 +51,7 @@ const UserDetailsSchema: Schema = new Schema(
   { _id: false },
 );
 
-const Location: Schema = new Schema(
+const LocationSchema: Schema = new Schema(
   {
     address1: {
       type: String,
@@ -77,7 +77,7 @@ const Location: Schema = new Schema(
   { _id: false },
 );
 
-const Visit: Schema = new Schema(
+const VisitSchema: Schema = new Schema(
   {
     venue: {
       type: Schema.Types.ObjectId,
@@ -118,17 +118,15 @@ const UserSchema: Schema = new Schema({
     required: false,
   },
   address: {
-    type: Location,
+    type: LocationSchema,
     required: false,
   },
   visits: {
-    type: [Visit],
+    type: [VisitSchema],
     required: false,
   },
 });
 
-const userModel = model<User & Document>('User', userSchema);
-const locationModel = model<User & Document>('Location', location);//location model
-const visitLocationModel = model<User & Document>('visitLocation', visitLocation);//visit location model
-export default userModel;
+const User = model<User & Document>('User', UserSchema);
 
+export default User;

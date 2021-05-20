@@ -1,0 +1,28 @@
+@use "../../../../assets/styles/abstracts/colors";
+@use "../../../../assets/styles/abstracts/fonts";
+
+.quickStats {
+  padding: 0 !important;
+  flex-direction: row !important;
+
+  .statsBox {
+    flex: 0 1 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    &:not(:last-child) {
+      border-right: 1px solid colors.$bg-50;
+    }
+
+    .label {
+      @include fonts.label;
+
+      color: colors.$bg-80;
+      margin: 0 0 0.5rem;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+}
