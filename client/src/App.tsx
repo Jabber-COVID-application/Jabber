@@ -15,6 +15,7 @@ const App = observer(
 
     return (
       <BrowserRouter>
+      kwejfvfeb
         {auth.isAuthenticated ? (
           <SidebarLayout>
             <Switch>
