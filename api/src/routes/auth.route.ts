@@ -3,7 +3,7 @@ import AuthController from '@controllers/auth.controller';
 import Route from '@interfaces/routes.interface';
 import authMiddleware from '@middlewares/auth.middleware';
 import validationMiddleware from '@middlewares/validation.middleware';
-import { LoginDto, SignupDto } from '@dtos/auth.dto';
+import { LoginValidator, SignupValidator } from '@dtos/auth.dto';
 
 class AuthRoute implements Route {
   public path = '/auth';
@@ -18,12 +18,12 @@ class AuthRoute implements Route {
     this.router.post('/hydrate', authMiddleware, this.authController.hydrate);
     this.router.post(
       '/signup',
-      validationMiddleware(SignupDto, 'body'),
+      validationMiddleware(SignupValidator, 'body'),
       this.authController.signup,
     );
     this.router.post(
       '/login',
-      validationMiddleware(LoginDto, 'body'),
+      validationMiddleware(LoginValidator, 'body'),
       this.authController.login,
     );
     this.router.post('/logout', authMiddleware, this.authController.logout);
