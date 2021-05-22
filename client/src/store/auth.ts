@@ -16,6 +16,8 @@ export class AuthStore {
   }
 
   hydrate() {
+    this.root.ui.isLoading = true;
+
     axiosInstance
       .get("/auth/hydrate")
       .then(({ status, data }) => {
@@ -24,7 +26,10 @@ export class AuthStore {
           this.root.user.populate(data.data);
         }
       })
-      .catch((e) => console.error(e));
+      .catch((e) => console.error(e))
+      .finally(() => {
+        this.root.ui.isLoading = false;
+      });
   }
 
   async login(params: LoginRequest) {

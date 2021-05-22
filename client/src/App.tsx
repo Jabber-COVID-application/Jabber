@@ -9,29 +9,32 @@ import { observer } from "mobx-react";
 import Rollout from "./pages/rollout/Rollout";
 import SidebarLayout from "./components/layout/sidebar-layout/SidebarLayout";
 import Profile from "./pages/profile/Profile";
+import Loader from "./components/layout/loader/Loader";
 
 const App = observer(
   (): JSX.Element => {
-    const { auth } = useStore();
+    const { auth, ui } = useStore();
 
     return (
       <BrowserRouter>
-        {auth.isAuthenticated ? (
-          <SidebarLayout>
+        <Loader loading={ui.isLoading}>
+          {auth.isAuthenticated ? (
+            <SidebarLayout>
+              <Switch>
+                <Route path="/dashboard" component={Dashboard} exact />
+                <Route path="/rollout" component={Rollout} exact />
+                <Route path="/profile" component={Profile} exact />
+                <Redirect to="/dashboard" />
+              </Switch>
+            </SidebarLayout>
+          ) : (
             <Switch>
-              <Route path="/dashboard" component={Dashboard} exact />
-              <Route path="/rollout" component={Rollout} exact />
-              <Route path="/profile" component={Profile} exact/>
-              <Redirect to="/dashboard" />
+              <Route path="/login" component={Login} exact />
+              <Route path="/signup" component={Signup} exact />
+              <Redirect to="/login" />
             </Switch>
-          </SidebarLayout>
-        ) : (
-          <Switch>
-            <Route path="/login" component={Login} exact />
-            <Route path="/signup" component={Signup} exact />
-            <Redirect to="/login" />
-          </Switch>
-        )}
+          )}
+        </Loader>
       </BrowserRouter>
     );
   }

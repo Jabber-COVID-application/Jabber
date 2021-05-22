@@ -1,0 +1,28 @@
+@use "../../../../assets/styles/abstracts/fonts";
+@use "../../../../assets/styles/abstracts/colors";
+
+.certification {
+  display: flex;
+  align-items: center;
+
+  .text {
+    p {
+      @include fonts.callout;
+      @include fonts.regular;
+
+      text-align: left;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  .code {
+    width: 86px;
+    height: 86px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: colors.$bg-30;
+  }
+}

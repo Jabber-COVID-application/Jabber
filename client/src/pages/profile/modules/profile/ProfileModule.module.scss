@@ -1,0 +1,36 @@
+@use "../../../../assets/styles/abstracts/fonts";
+@use "../../../../assets/styles/abstracts/colors";
+
+.profile {
+  .user {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid colors.$bg-50;
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid colors.$bg-90;
+    }
+
+    .details {
+      margin-left: 2rem;
+
+      h5 {
+        margin: 0 0 0.5rem;
+        text-align: left;
+      }
+
+      p {
+        @include fonts.label;
+
+        color: colors.$bg-70;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  }
+}

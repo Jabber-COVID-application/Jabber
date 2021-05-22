@@ -31,8 +31,6 @@
     }
   }
 
-
-
   input {
     @include fonts.h6;
     @include fonts.regular;
@@ -58,6 +56,11 @@
       color: colors.$bittersweet-110;
       padding: calc(0.625rem - 1px) calc(0.9375rem - 1px);
       border: 2px solid colors.$bittersweet-110;
+    }
+
+    &:disabled {
+      color: colors.$bg-80;
+      background: colors.$bg-40;
     }
   }
 }
