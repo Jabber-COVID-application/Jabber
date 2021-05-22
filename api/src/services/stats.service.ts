@@ -1,9 +1,9 @@
-import { GetStatsDto } from '@dtos/stats.dto';
+import { GetStatsResponse } from '@interfaces/stats.interface';
 import axios from 'axios';
 import { Stats, StatsByState } from '@/interfaces/stats.interface';
 
 class StatsService {
-  public async getStats(): Promise<GetStatsDto> {
+  public async getStats(): Promise<GetStatsResponse> {
     // Returns inaccurate information, but could not figure out how to use Wikipedia APIs. ¯\_(ツ)_/¯
     return axios
       .request({
@@ -42,7 +42,7 @@ class StatsService {
             },
           );
 
-          const stats: GetStatsDto = { nationalStats, statsByState };
+          const stats: GetStatsResponse = { nationalStats, statsByState };
 
           return stats;
         }
@@ -56,7 +56,7 @@ class StatsService {
             tests: 0,
           },
           statsByState: {},
-        } as GetStatsDto;
+        } as GetStatsResponse;
       });
   }
 }

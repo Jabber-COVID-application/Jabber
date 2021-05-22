@@ -1,17 +1,20 @@
-import { IsEmail, IsString } from 'class-validator';
-import { Location, UserDetails, UserType } from '@interfaces/users.interface';
+import * as Joi from '@hapi/joi';
+import 'joi-extract-type';
+import { AddressDto } from '@dtos/misc.dto';
 
-export class CreateUserDto {
-  @IsEmail()
-  public email: string;
+const UserDetailsValidator = Joi.object({
+  firstName: Joi.string().required(),
+  middleName: Joi.string(),
+  lastName: Joi.string().required(),
+  dateOfBirth: Joi.date().required(),
+});
 
-  @IsString()
-  public password: string;
+export const CreateUserValidator = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+  type: Joi.string().required(),
+  userDetails: UserDetailsValidator,
+  userAddress: AddressDto,
+});
 
-  @IsString()
-  public type: UserType;
-
-  public userDetails?: UserDetails;
-
-  public userAddress?: Location;
-}
+export type CreateUserDto = Joi.extractType<typeof CreateUserValidator>;

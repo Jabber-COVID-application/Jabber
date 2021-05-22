@@ -1,4 +1,4 @@
-import { ObjectId } from 'mongoose';
+import { Address } from './misc.interface';
 
 export enum UserType {
   GENERAL = 'GENERAL',
@@ -14,7 +14,7 @@ export interface User {
   type: UserType;
   active: boolean;
   userDetails?: UserDetails;
-  userAddress?: Location;
+  userAddress?: Address;
   visits?: Visit[];
 }
 
@@ -25,16 +25,8 @@ export interface UserDetails {
   dateOfBirth: Date;
 }
 
-export interface Location {
-  address1: string;
-  address2?: string;
-  city: string;
-  postCode: string;
-  state: string;
-}
-
 export interface Visit {
-  venue: ObjectId;
+  venue: string;
   checkin: Date;
   checkout: Date;
 }

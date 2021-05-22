@@ -1,5 +1,6 @@
 import { model, Schema, Document } from 'mongoose';
 import { User, UserType } from '@interfaces/users.interface';
+import { AddressSchema } from '@models/misc.model';
 
 /* User Data Model
  *
@@ -51,32 +52,6 @@ const UserDetailsSchema: Schema = new Schema(
   { _id: false },
 );
 
-const LocationSchema: Schema = new Schema(
-  {
-    address1: {
-      type: String,
-      required: true,
-    },
-    address2: {
-      type: String,
-      required: false,
-    },
-    city: {
-      type: String,
-      required: true,
-    },
-    postCode: {
-      type: String,
-      required: true,
-    },
-    state: {
-      type: String,
-      required: true,
-    },
-  },
-  { _id: false },
-);
-
 const VisitSchema: Schema = new Schema(
   {
     venue: {
@@ -118,7 +93,7 @@ const UserSchema: Schema = new Schema({
     required: false,
   },
   address: {
-    type: LocationSchema,
+    type: AddressSchema,
     required: false,
   },
   visits: {
