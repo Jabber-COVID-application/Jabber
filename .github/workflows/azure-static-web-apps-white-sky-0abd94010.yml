@@ -17,7 +17,7 @@ jobs:
     environment:
       name: client
     steps:
-      - run: echo $REACT_APP_API_URL
+      - run: echo ${{ secrets.REACT_APP_API_URL }}
       - uses: actions/checkout@v2
         with:
           submodules: true
