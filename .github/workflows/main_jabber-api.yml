@@ -25,10 +25,9 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        yarn self-update
         yarn -v
         cd api
-        yarn
+        yarn install --focus
         yarn build
       env:
         CI: false
