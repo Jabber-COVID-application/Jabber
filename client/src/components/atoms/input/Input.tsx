@@ -62,9 +62,9 @@ const Input = (props: Props): JSX.Element => {
         placeholder={placeholder || ""}
         className={`
           ${invalid || error ? styles.error : ""}
-          ${disabled || isSubmitting ? styles.disabled : ""}
           ${className}
         `}
+        disabled={disabled || isSubmitting}
         {...inputProps}
       />
     </div>
