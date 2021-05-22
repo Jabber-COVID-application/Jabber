@@ -77,7 +77,7 @@ const Sidebar = observer(
               text={user.fullName || ""}
               type="avatar"
               selected={selected === "/profile"}
-              action={() => auth.logout()}
+              action={() => history.push("/profile")}
             />
           </div>
         </div>

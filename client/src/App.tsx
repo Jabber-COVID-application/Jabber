@@ -8,6 +8,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import { observer } from "mobx-react";
 import Rollout from "./pages/rollout/Rollout";
 import SidebarLayout from "./components/layout/sidebar-layout/SidebarLayout";
+import Profile from "./pages/profile/Profile";
 
 const App = observer(
   (): JSX.Element => {
@@ -20,6 +21,7 @@ const App = observer(
             <Switch>
               <Route path="/dashboard" component={Dashboard} exact />
               <Route path="/rollout" component={Rollout} exact />
+              <Route path="/profile" component={Profile} exact/>
               <Redirect to="/dashboard" />
             </Switch>
           </SidebarLayout>
