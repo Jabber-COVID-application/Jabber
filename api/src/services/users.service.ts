@@ -32,6 +32,7 @@ class UserService {
 
     const active = true;
 
+    // @ts-ignore
     const createUserData: User = await this.users.create({ ...userData, password: hashedPassword, active });
 
     return createUserData;
