@@ -25,8 +25,9 @@ jobs:
 
     - name: npm install, build, and test
       run: |
+        yarn -v
         cd api
-        yarn workspaces focus
+        yarn
         yarn build
       env:
         CI: false
