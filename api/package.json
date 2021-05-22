@@ -6,9 +6,9 @@
   "private": true,
   "license": "ISC",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "start": "yarn run build && cross-env NODE_ENV=production node dist/server.js",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "build": "tsc -v && tsc && npx tsc-alias",
+    "build": "tsc && npx tsc-alias",
     "test": "jest --forceExit --detectOpenHandles",
     "lint": "eslint --ignore-path .gitignore --ext .ts src/",
     "lint:fix": "yarn run lint -- --fix"
