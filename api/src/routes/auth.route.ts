@@ -15,7 +15,7 @@ class AuthRoute implements Route {
   }
 
   private initializeRoutes() {
-    this.router.post('/hydrate', authMiddleware, this.authController.hydrate);
+    this.router.get('/hydrate', authMiddleware, this.authController.hydrate);
     this.router.post(
       '/signup',
       validationMiddleware(SignupValidator, 'body'),
