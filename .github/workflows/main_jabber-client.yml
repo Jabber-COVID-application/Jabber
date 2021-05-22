@@ -38,5 +38,5 @@ jobs:
         app-name: jabber-client
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66BC0825088A4BD49A09F9ADB879B0CC }}
-        package: ./client
+        package: ./client/build
 
