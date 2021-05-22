@@ -17,9 +17,6 @@ jobs:
     environment:
       name: client
     steps:
-      - run: echo $REACT_APP_API_URL
-        env:
-          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
       - uses: actions/checkout@v2
         with:
           submodules: true
@@ -37,6 +34,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
         env:
           CI: false
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
