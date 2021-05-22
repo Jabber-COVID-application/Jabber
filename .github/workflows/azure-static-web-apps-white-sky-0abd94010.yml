@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - run: echo $REACT_APP_API_URL
       - uses: actions/checkout@v2
         with:
           submodules: true
