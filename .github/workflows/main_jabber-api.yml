@@ -25,9 +25,9 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        yarn -v
+        yarn
         cd api
-        yarn install
+        yarn
         yarn build
       env:
         CI: false
@@ -38,5 +38,5 @@ jobs:
         app-name: jabber-api
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5D77E5B6DC624D17985F39196AAF3DF3 }}
-        package: ./api
+        package: .
 

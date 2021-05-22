@@ -14,5 +14,8 @@
   "repository": "https://github.com/Jabber-COVID-application/Jabber.git",
   "author": "MichaelKilbane <me@michaelkilbane.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "cd api && yarn start"
+  }
 }
