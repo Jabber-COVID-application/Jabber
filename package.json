@@ -6,7 +6,8 @@
       "client"
     ],
     "nohoist": [
-      "**/jest"
+      "**/jest",
+      "api/**"
     ]
   },
   "version": "1.0.0",
