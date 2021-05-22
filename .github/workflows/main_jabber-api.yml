@@ -27,7 +27,7 @@ jobs:
       run: |
         yarn -v
         cd api
-        yarn install --focus
+        yarn install
         yarn build
       env:
         CI: false
