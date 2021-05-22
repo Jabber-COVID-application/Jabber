@@ -25,9 +25,12 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        npm install
-        npm run build --if-present
-        npm run test --if-present
+        yarn
+        cd api
+        yarn
+        yarn build
+      env:
+        CI: false
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
@@ -35,5 +38,5 @@ jobs:
         app-name: jabber-api
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5D77E5B6DC624D17985F39196AAF3DF3 }}
-        package: .
+        package: ./api
 
