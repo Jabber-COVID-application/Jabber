@@ -25,7 +25,6 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        yarn plugin import workspace-tools
         cd api
         yarn workspaces focus
         yarn build
