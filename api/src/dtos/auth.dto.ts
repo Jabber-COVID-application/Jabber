@@ -1,26 +1,18 @@
-import { IsDate, IsDateString, IsEmail, IsString } from 'class-validator';
+import * as Joi from '@hapi/joi';
+import 'joi-extract-type';
 
-export class LoginDto {
-  @IsEmail()
-  public email: string;
+export const LoginValidator = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+});
 
-  @IsString()
-  public password: string;
-}
+export const SignupValidator = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+  firstName: Joi.string().required(),
+  lastName: Joi.string().required(),
+  dateOfBirth: Joi.date().required(),
+});
 
-export class SignupDto {
-  @IsEmail()
-  public email: string;
-
-  @IsString()
-  public password: string;
-
-  @IsString()
-  public firstName: string;
-
-  @IsString()
-  public lastName: string;
-
-  @IsDateString()
-  public dateOfBirth: Date;
-}
+export type LoginDto = Joi.extractType<typeof LoginValidator>;
+export type SignupDto = Joi.extractType<typeof SignupValidator>;

@@ -7,3 +7,8 @@ export interface Stats {
 export interface StatsByState {
   [state: string]: Stats;
 }
+
+export interface GetStatsResponse {
+  nationalStats: Stats;
+  statsByState: StatsByState;
+}

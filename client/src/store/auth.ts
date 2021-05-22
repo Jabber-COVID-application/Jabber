@@ -17,7 +17,7 @@ export class AuthStore {
 
   hydrate() {
     axiosInstance
-      .post("/auth/hydrate")
+      .get("/auth/hydrate")
       .then(({ status, data }) => {
         if (status === 200) {
           this.isAuthenticated = true;
