@@ -17,7 +17,7 @@ const authMiddleware = async (
       null;
 
     if (Authorization) {
-      const secretKey: string = config.get('secretKey');
+      const secretKey: string = process.env.API_SECRET;
       const verificationResponse = (await jwt.verify(
         Authorization,
         secretKey,
