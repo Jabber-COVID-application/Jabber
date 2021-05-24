@@ -1,3 +1,5 @@
+import { Address } from "./misc.types";
+
 export enum UserType {
   GENERAL = "GENERAL",
   VENUE_ADMIN = "VENUE_ADMIN",
@@ -12,7 +14,7 @@ export interface User {
   type: UserType;
   active: boolean;
   userDetails?: UserDetails;
-  userAddress?: Location;
+  userAddress?: Address;
   visits?: Visit[];
 }
 
@@ -21,14 +23,6 @@ export interface UserDetails {
   middleName?: string;
   lastName: string;
   dateOfBirth: Date;
-}
-
-export interface Location {
-  address1: string;
-  address2?: string;
-  city: string;
-  postCode: string;
-  state: string;
 }
 
 export interface Visit {

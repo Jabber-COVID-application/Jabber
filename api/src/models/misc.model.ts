@@ -2,23 +2,11 @@ import { Schema } from 'mongoose';
 
 export const AddressSchema: Schema = new Schema(
   {
-    address1: {
+    formatted: {
       type: String,
       required: true,
     },
-    address2: {
-      type: String,
-      required: false,
-    },
-    city: {
-      type: String,
-      required: true,
-    },
-    postCode: {
-      type: String,
-      required: true,
-    },
-    state: {
+    placeId: {
       type: String,
       required: true,
     },

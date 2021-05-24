@@ -1,12 +1,7 @@
 import { RootStore } from "./root";
 import { makeAutoObservable } from "mobx";
-import {
-  User,
-  UserDetails,
-  UserType,
-  Visit,
-  Location,
-} from "../types/user.types";
+import { User, UserDetails, UserType, Visit } from "../types/user.types";
+import { Address } from "../types/misc.types";
 
 export class UserStore {
   root: RootStore;
@@ -16,7 +11,7 @@ export class UserStore {
   type?: UserType;
 
   userDetails?: UserDetails;
-  userAddress?: Location;
+  userAddress?: Address;
 
   visits?: Visit[];
 

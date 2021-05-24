@@ -29,9 +29,12 @@ class AuthService {
   }
 
   public async signup(userData: SignupDto): Promise<User> {
-    const { email, password, firstName, lastName, dateOfBirth } = userData;
-
     if (isEmpty(userData)) throw new HttpException(400, "You're not userData");
+
+    const { email, password, firstName, lastName, dateOfBirth, type } = userData;
+
+    if (type === UserType.SUPER_ADMIN || type === UserType.VACCINE_ADMIN)
+      throw new HttpException(405, 'This user type cannot be used in sign up');
 
     const findUser: User = await this.users.findOne({ email });
     if (findUser) throw new HttpException(409, `You're email ${email} already exists`);
@@ -40,7 +43,7 @@ class AuthService {
     const createUserData: User = await this.users.create({
       email,
       password: hashedPassword,
-      type: UserType.GENERAL,
+      type,
       active: true,
       userDetails: {
         firstName,

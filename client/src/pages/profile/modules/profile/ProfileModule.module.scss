@@ -5,9 +5,7 @@
   .user {
     display: flex;
     align-items: center;
-    padding-bottom: 1rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid colors.$bg-50;
 
     .icon {
       width: 64px;
@@ -17,7 +15,7 @@
     }
 
     .details {
-      margin-left: 2rem;
+      margin-left: 1.5rem;
 
       h5 {
         margin: 0 0 0.5rem;

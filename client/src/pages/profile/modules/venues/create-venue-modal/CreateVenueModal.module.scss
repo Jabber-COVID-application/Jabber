@@ -1,0 +1,12 @@
+@use "../../../../../assets/styles/abstracts/fonts";
+@use "../../../../../assets/styles/abstracts/colors";
+
+.createVenueModal {
+  h4 {
+    margin: 0 0 2rem;
+  }
+
+  .submitButton {
+    margin-top: 1rem;
+  }
+}

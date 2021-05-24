@@ -1,0 +1,36 @@
+@use "../../../../../../assets/styles/abstracts/fonts";
+@use "../../../../../../assets/styles/abstracts/colors";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .name {
+    margin: 0 0 1rem;
+  }
+
+  .address {
+    @include fonts.callout;
+    @include fonts.regular;
+
+    color: colors.$bg-80;
+    margin: 0 0 3rem;
+  }
+
+  .below {
+    @include fonts.callout;
+    @include fonts.regular;
+
+    color: colors.$bg-80;
+    margin: 3rem 0;
+  }
+
+  svg {
+    max-width: 100%;
+  }
+}
+
+@page {
+  margin: 5rem;
+}

@@ -1,0 +1,11 @@
+@use "../../../../assets/styles/abstracts/fonts";
+@use "../../../../assets/styles/abstracts/colors";
+
+.venues {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin-top: 1.5rem;
+}
