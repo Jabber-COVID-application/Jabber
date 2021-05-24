@@ -1,3 +1,20 @@
-.submitButton {
-  margin-top: 1rem;
+@use "../../assets/styles/abstracts/colors";
+@use "../../assets/styles/abstracts/fonts";
+
+.signup {
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    @include fonts.callout;
+    @include fonts.regular;
+
+    color: colors.$bg-80;
+    margin: 0 0 1rem;
+  }
+
+  .button {
+    margin-top: 1rem;
+  }
 }

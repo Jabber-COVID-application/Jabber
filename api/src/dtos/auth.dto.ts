@@ -12,6 +12,7 @@ export const SignupValidator = Joi.object({
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
   dateOfBirth: Joi.date().required(),
+  type: Joi.string().required(),
 });
 
 export type LoginDto = Joi.extractType<typeof LoginValidator>;

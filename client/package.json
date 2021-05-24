@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.4",
+    "@googlemaps/react-wrapper": "^1.1.0",
     "@hookform/resolvers": "^2.5.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -19,13 +21,17 @@
     "mobx-react": "^7.1.0",
     "qrcode.react": "^1.0.1",
     "react": "^17.0.2",
+    "react-cool-onclickoutside": "^1.6.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.5.3",
+    "react-merge-refs": "^1.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-svg": "^13.0.3",
+    "react-to-print": "^2.12.4",
     "sass": "^1.32.12",
     "typescript": "^4.1.2",
+    "use-places-autocomplete": "^1.9.3",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.9",
     "yup-password": "^0.2.1"
@@ -55,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@types/googlemaps": "^3.43.3",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.19.0"

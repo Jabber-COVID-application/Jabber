@@ -3,11 +3,14 @@ import ReactDOM from "react-dom";
 import "./assets/styles/global.scss";
 import App from "./App";
 import { StoreProvider } from "./store";
+import ScrollLockerProvider from "./components/layout/scroll-locker/ScrollLocker";
 
 ReactDOM.render(
   <React.StrictMode>
     <StoreProvider>
-      <App />
+      <ScrollLockerProvider>
+        <App />
+      </ScrollLockerProvider>
     </StoreProvider>
   </React.StrictMode>,
   document.getElementById("root")

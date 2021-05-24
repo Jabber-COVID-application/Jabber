@@ -5,6 +5,7 @@ import { useStore } from "../../../../store";
 import styles from "./ProfileModule.module.scss";
 import UserIcon from "../../../../assets/images/user.png";
 import Button from "../../../../components/atoms/button/Button";
+import { userTypePrettyName } from "../../../../utils/user.utils";
 
 const ProfileModule = observer(
   (): JSX.Element => {
@@ -21,7 +22,7 @@ const ProfileModule = observer(
 
           <div className={styles.details}>
             <h5>{user.fullName}</h5>
-            <p>Uncertified</p>
+            <p>{user.type && userTypePrettyName(user.type)}</p>
           </div>
         </div>
 

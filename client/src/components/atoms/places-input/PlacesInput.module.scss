@@ -1,0 +1,111 @@
+@use '../../../assets/styles/abstracts/fonts';
+@use '../../../assets/styles/abstracts/colors';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  .above {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    label {
+      @include fonts.label;
+
+      color: colors.$bg-100;
+    }
+
+    .errorMessage {
+      @include fonts.label;
+
+      color: colors.$bittersweet-110;
+      opacity: 0;
+      margin: 0;
+      transition: opacity 0.5s ease, height 0.5s ease;
+
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
+
+  input {
+    @include fonts.h6;
+    @include fonts.regular;
+
+    color: colors.$bg-100;
+    padding: 0.625rem 0.9375rem;
+    background: colors.$bg-30;
+    border: 1px solid colors.$bg-50;
+    border-radius: 0.625rem;
+    outline: 0;
+    transition: padding 0.2s ease, border 0.2s ease;
+
+    &:focus {
+      padding: calc(0.625rem - 1px) calc(0.9375rem - 1px);
+      border: 2px solid colors.$bg-80;
+    }
+
+    &::placeholder {
+      color: colors.$bg-60;
+    }
+
+    &.error {
+      color: colors.$bittersweet-110;
+      padding: calc(0.625rem - 1px) calc(0.9375rem - 1px);
+      border: 2px solid colors.$bittersweet-110;
+    }
+
+    &:disabled {
+      color: colors.$bg-80;
+      background: colors.$bg-40;
+    }
+
+    &.withSuggestions {
+      border-radius: 0.625rem 0.625rem 0 0;
+    }
+  }
+
+  .suggestionsWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .suggestions {
+      position: absolute;
+      top: calc(100%);
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1rem 0;
+      background: colors.$bg-20;
+      border: 1px solid colors.$bg-50;
+      border-top: 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0 0 0.625rem 0.625rem;
+      //box-shadow: 0 2px 15px -2px rgb(33 37 41 / 30%);
+
+      .suggestion {
+        @include fonts.callout;
+        @include fonts.regular;
+
+        color: colors.$bg-90;
+        padding: 0.5rem 1rem;
+        transition: background 0.2s ease;
+
+        &:hover,
+        &:focus {
+          background: colors.$bg-30;
+        }
+
+        span {
+          color: colors.$bg-70;
+        }
+      }
+    }
+  }
+}

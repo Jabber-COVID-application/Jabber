@@ -31,8 +31,6 @@ export class StatsStore {
       if (status === 200) {
         this.nationalStats = data.data.nationalStats;
         this.statsByState = data.data.statsByState;
-
-        console.log(this.nationalStats, this.statsByState);
       }
     });
   }

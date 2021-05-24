@@ -1,6 +1,7 @@
 import { makeAutoObservable } from "mobx";
 import { RootStore } from "./root";
 import axiosInstance from "../transport";
+import { UserType } from "../types/user.types";
 
 export class AuthStore {
   root: RootStore;
@@ -77,4 +78,5 @@ export interface SignupRequest {
   dateOfBirth: string;
   email: string;
   password: string;
+  type: UserType;
 }

@@ -1,11 +1,6 @@
-import React, { ForwardedRef } from "react";
+import React from "react";
 import styles from "./Input.module.scss";
-import {
-  ChangeHandler,
-  Control,
-  RegisterOptions,
-  useController,
-} from "react-hook-form";
+import { Control, RegisterOptions, useController } from "react-hook-form";
 
 interface Props {
   name: string;

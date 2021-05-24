@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/layout/navbar/Navbar";
 import Card from "../../components/atoms/card/Card";
 import Input from "../../components/atoms/input/Input";
@@ -15,6 +15,8 @@ import YupPassword from "yup-password";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Column from "../../components/atoms/column/Column";
 import Content from "../../components/atoms/content/Content";
+import { UserType } from "../../types/user.types";
+import { userTypePrettyName } from "../../utils/user.utils";
 
 YupPassword(yup);
 
@@ -45,7 +47,11 @@ const Signup = observer(
     const { auth } = useStore();
     const history = useHistory();
 
+    const [userType, setUserType] = useState<UserType | undefined>();
+
     const onSubmit = handleSubmit((data: SignupRequest) => {
+      if (!userType) return;
+
       const { firstName, lastName, dateOfBirth, email, password } = data;
 
       auth
@@ -55,9 +61,9 @@ const Signup = observer(
           dateOfBirth,
           email,
           password,
+          type: userType,
         })
         .then((successful) => {
-          console.log(successful);
           if (successful) history.push("/login");
         });
     });
@@ -66,45 +72,73 @@ const Signup = observer(
       <NavbarLayout nav={<Navbar type="login" />}>
         <Content centered>
           <Column width={1 / 2}>
-            <Card>
+            <Card className={styles.signup}>
               <h4>Sign up</h4>
+              <p>
+                {userType
+                  ? `${userTypePrettyName(userType)} Account`
+                  : "What kind of account do you require?"}
+              </p>
 
-              <form onSubmit={onSubmit}>
-                <Input label="First Name" name="firstName" control={control} />
+              {userType ? (
+                <form onSubmit={onSubmit}>
+                  <Input
+                    label="First Name"
+                    name="firstName"
+                    control={control}
+                  />
 
-                <Input label="Last Name" name="lastName" control={control} />
+                  <Input label="Last Name" name="lastName" control={control} />
 
-                <Input
-                  label="Date of Birth"
-                  name="dateOfBirth"
-                  type="date"
-                  control={control}
-                />
+                  <Input
+                    label="Date of Birth"
+                    name="dateOfBirth"
+                    type="date"
+                    control={control}
+                  />
 
-                <Input label="Email" name="email" control={control} />
+                  <Input label="Email" name="email" control={control} />
 
-                <Input
-                  label="Password"
-                  name="password"
-                  type="password"
-                  control={control}
-                />
+                  <Input
+                    label="Password"
+                    name="password"
+                    type="password"
+                    control={control}
+                  />
 
-                <Input
-                  label="Confirm Password"
-                  name="confirmPassword"
-                  type="password"
-                  control={control}
-                />
+                  <Input
+                    label="Confirm Password"
+                    name="confirmPassword"
+                    type="password"
+                    control={control}
+                  />
 
-                <Button
-                  type="submit"
-                  className={styles.submitButton}
-                  disabled={isSubmitting}
-                >
-                  Submit
-                </Button>
-              </form>
+                  <Button
+                    type="submit"
+                    className={styles.button}
+                    disabled={isSubmitting}
+                  >
+                    Submit
+                  </Button>
+                </form>
+              ) : (
+                <>
+                  <Button
+                    styleType="outline"
+                    className={styles.button}
+                    onClick={() => setUserType(UserType.GENERAL)}
+                  >
+                    General Public
+                  </Button>
+                  <Button
+                    styleType="outline"
+                    className={styles.button}
+                    onClick={() => setUserType(UserType.VENUE_ADMIN)}
+                  >
+                    Venue Owner
+                  </Button>
+                </>
+              )}
             </Card>
           </Column>
         </Content>
