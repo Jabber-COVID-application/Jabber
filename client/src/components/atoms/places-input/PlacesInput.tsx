@@ -131,6 +131,7 @@ const PlacesInputInner = (props: Props): JSX.Element => {
           placeholder={placeholder || ""}
           onChange={onChange}
           value={value}
+          autoComplete="off"
           className={`
           ${invalid || error ? styles.error : ""}
           ${status === "OK" && styles.withSuggestions}
