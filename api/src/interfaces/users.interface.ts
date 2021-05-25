@@ -15,7 +15,6 @@ export interface User {
   active: boolean;
   userDetails?: UserDetails;
   userAddress?: Address;
-  visits?: Visit[];
 }
 
 export interface UserDetails {
@@ -23,10 +22,4 @@ export interface UserDetails {
   middleName?: string;
   lastName: string;
   dateOfBirth: Date;
-}
-
-export interface Visit {
-  venue: string;
-  checkin: Date;
-  checkout: Date;
 }

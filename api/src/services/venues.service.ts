@@ -7,6 +7,11 @@ import { CreateVenueDto, DeleteVenueDto, UpdateVenueDto } from '@dtos/venues.dto
 class VenueService {
   public venues = venueModel;
 
+  public async findVenue(venueId: string): Promise<Venue> {
+    const venue: Venue = await this.venues.findById(venueId);
+    return venue;
+  }
+
   public async findVenuesForUser(userId: string): Promise<Venue[]> {
     const venues: Venue[] = await this.venues.find({ owner: userId });
     return venues;

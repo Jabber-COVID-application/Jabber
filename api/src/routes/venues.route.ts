@@ -5,6 +5,7 @@ import VenuesController from '@/controllers/venues.controller';
 import {
   CreateVenueValidator,
   DeleteVenueValidator,
+  GetVenueValidator,
   UpdateVenueValidator,
 } from '@dtos/venues.dto';
 import authMiddleware from '@middlewares/auth.middleware';
@@ -21,6 +22,12 @@ class VenuesRoute implements Route {
   }
 
   private initializeRoutes() {
+    this.router.get(
+      '/:venueId',
+      authMiddleware,
+      validationMiddleware(GetVenueValidator, 'params'),
+      this.venuesController.getVenue,
+    );
     this.router.get(
       '',
       authMiddleware,
