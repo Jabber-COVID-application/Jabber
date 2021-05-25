@@ -1,0 +1,42 @@
+@use "../../../../assets/styles/abstracts/fonts";
+@use "../../../../assets/styles/abstracts/colors";
+@use "sass:color";
+
+.header {
+  display: flex;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid colors.$bg-50;
+  align-items: center;
+
+  .circle {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 3px solid colors.$bittersweet-110;
+    background: color.adjust(colors.$bittersweet-110, $alpha: -0.9);
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      text-align: left !important;
+      margin: 0 0 0.5rem;
+    }
+
+    .date {
+      @include fonts.callout;
+
+      text-transform: uppercase;
+      text-align: left !important;
+      color: colors.$bg-80;
+      margin: 0;
+    }
+  }
+}

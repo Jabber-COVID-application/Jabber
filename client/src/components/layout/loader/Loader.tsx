@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import styles from "./Loader.module.scss";
+import Spinner from "./spinner/Spinner";
 
 interface Props {
   loading?: boolean;
@@ -8,13 +8,7 @@ interface Props {
 const Loader = (props: PropsWithChildren<Props>): JSX.Element => {
   const { loading, children } = props;
 
-  return loading ? (
-    <div className={styles.loader}>
-      <div className={styles.spinner} />
-    </div>
-  ) : (
-    <>{children}</>
-  );
+  return loading ? <Spinner /> : <>{children}</>;
 };
 
 export default Loader;

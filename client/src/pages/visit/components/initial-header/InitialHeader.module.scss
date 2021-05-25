@@ -1,0 +1,29 @@
+@use "../../../../assets/styles/abstracts/fonts";
+@use "../../../../assets/styles/abstracts/colors";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid colors.$bg-50;
+
+  .venue {
+    @include fonts.regular;
+
+    text-align: left !important;
+    color: colors.$bg-80;
+    margin: 0 0 1rem;
+  }
+
+  .title {
+    text-align: left !important;
+    margin: 0 0 1rem;
+  }
+
+  .text {
+    @include fonts.regular;
+
+    text-align: left !important;
+    margin: 0;
+  }
+}

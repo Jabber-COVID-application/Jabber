@@ -13,8 +13,6 @@ export class UserStore {
   userDetails?: UserDetails;
   userAddress?: Address;
 
-  visits?: Visit[];
-
   constructor(root: RootStore) {
     makeAutoObservable(this);
 
@@ -27,7 +25,14 @@ export class UserStore {
     if (user.type) this.type = user.type;
     if (user.userDetails) this.userDetails = user.userDetails;
     if (user.userAddress) this.userAddress = user.userAddress;
-    if (user.visits) this.visits = user.visits;
+  }
+
+  clear() {
+    this.id = undefined;
+    this.email = undefined;
+    this.type = undefined;
+    this.userDetails = undefined;
+    this.userAddress = undefined;
   }
 
   get fullName() {

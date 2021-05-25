@@ -4,6 +4,11 @@
 .venues {
   display: flex;
   flex-direction: column;
+
+  .noVenues {
+    margin: 0;
+    color: colors.$bg-80;
+  }
 }
 
 .button {

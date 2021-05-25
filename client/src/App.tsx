@@ -10,6 +10,11 @@ import Rollout from "./pages/rollout/Rollout";
 import SidebarLayout from "./components/layout/sidebar-layout/SidebarLayout";
 import Profile from "./pages/profile/Profile";
 import Loader from "./components/layout/loader/Loader";
+import Visit from "./pages/visit/Visit";
+import PathAttemptProvider, {
+  RedirectCatchPathAttempt,
+  RedirectToPathAttempt,
+} from "./components/routing/path-attempt/PathAttempt";
 
 const App = observer(
   (): JSX.Element => {
@@ -18,22 +23,25 @@ const App = observer(
     return (
       <BrowserRouter>
         <Loader loading={ui.isLoading}>
-          {auth.isAuthenticated ? (
-            <SidebarLayout>
+          <PathAttemptProvider>
+            {auth.isAuthenticated ? (
+              <SidebarLayout>
+                <Switch>
+                  <Route path="/dashboard" component={Dashboard} exact />
+                  <Route path="/rollout" component={Rollout} exact />
+                  <Route path="/profile" component={Profile} exact />
+                  <Route path="/visit/:venueId" component={Visit} exact />
+                  <RedirectToPathAttempt to="/dashboard" />
+                </Switch>
+              </SidebarLayout>
+            ) : (
               <Switch>
-                <Route path="/dashboard" component={Dashboard} exact />
-                <Route path="/rollout" component={Rollout} exact />
-                <Route path="/profile" component={Profile} exact />
-                <Redirect to="/dashboard" />
+                <Route path="/login" component={Login} exact />
+                <Route path="/signup" component={Signup} exact />
+                <RedirectCatchPathAttempt to="/login" />
               </Switch>
-            </SidebarLayout>
-          ) : (
-            <Switch>
-              <Route path="/login" component={Login} exact />
-              <Route path="/signup" component={Signup} exact />
-              <Redirect to="/login" />
-            </Switch>
-          )}
+            )}
+          </PathAttemptProvider>
         </Loader>
       </BrowserRouter>
     );

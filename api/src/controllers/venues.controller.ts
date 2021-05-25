@@ -8,6 +8,18 @@ import { CreateVenueDto, DeleteVenueDto, UpdateVenueDto } from '@dtos/venues.dto
 class VenuesController {
   public venueService = new VenuesService();
 
+  public getVenue = async (req: RequestWithUser, res: Response, next: NextFunction) => {
+    const venueId = req.params.venueId;
+
+    try {
+      const findVenue: Venue = await this.venueService.findVenue(venueId);
+
+      res.status(200).json({ data: findVenue, message: 'findVenue' });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public getVenues = async (req: RequestWithUser, res: Response, next: NextFunction) => {
     try {
       const userData: User = req.user;

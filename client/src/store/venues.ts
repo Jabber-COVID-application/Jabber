@@ -16,6 +16,19 @@ export class VenueStore {
     this.venues = {};
   }
 
+  addVenue(venue: Venue) {
+    this.venues[venue._id] = venue;
+  }
+
+  async fetchVenue(venueId: string) {
+    return axiosInstance.get(`/venues/${venueId}`).then(({ status, data }) => {
+      if (status !== 200) throw new Error("Venue not found");
+
+      const venue: Venue = data.data;
+      this.addVenue(venue);
+    });
+  }
+
   fetchOwnedVenues() {
     axiosInstance.get("/venues").then(({ status, data }) => {
       if (status === 200) {

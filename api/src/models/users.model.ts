@@ -52,24 +52,6 @@ const UserDetailsSchema: Schema = new Schema(
   { _id: false },
 );
 
-const VisitSchema: Schema = new Schema(
-  {
-    venue: {
-      type: Schema.Types.ObjectId,
-      required: true,
-    },
-    checkin: {
-      type: Date,
-      required: true,
-    },
-    checkout: {
-      type: Date,
-      required: false,
-    },
-  },
-  { _id: false },
-);
-
 const UserSchema: Schema = new Schema({
   email: {
     type: String,
@@ -94,10 +76,6 @@ const UserSchema: Schema = new Schema({
   },
   address: {
     type: AddressSchema,
-    required: false,
-  },
-  visits: {
-    type: [VisitSchema],
     required: false,
   },
 });

@@ -15,7 +15,6 @@ export interface User {
   active: boolean;
   userDetails?: UserDetails;
   userAddress?: Address;
-  visits?: Visit[];
 }
 
 export interface UserDetails {

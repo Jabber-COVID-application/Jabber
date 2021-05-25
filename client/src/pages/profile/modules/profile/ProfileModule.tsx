@@ -16,7 +16,7 @@ const ProfileModule = observer(
      */
 
     return (
-      <Card size="packed" label="Your Profile" className={styles.profile}>
+      <Card size="packed" label="Your Visit" className={styles.profile}>
         <div className={styles.user}>
           <img src={UserIcon} className={styles.icon} />
 

@@ -24,6 +24,9 @@ const VenuesModule = observer(
       <>
         <Card size="packed" label="Your Venues">
           <div className={styles.venues}>
+            {venues.ownedVenues.length === 0 && (
+              <p className={styles.noVenues}>No venues yet.</p>
+            )}
             {venues.ownedVenues.map((venue) => (
               <VenueItem
                 name={venue.name}
