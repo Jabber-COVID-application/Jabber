@@ -1,3 +1,4 @@
+import { observer } from "mobx-react";
 import React from "react";
 import { useCallback } from "react";
 import Column from "../../components/atoms/column/Column";
@@ -9,35 +10,37 @@ import RolloutEstimateModule from "./modules/rollout-estimate/RolloutEstimateMod
 import VaccineCertificationModule from "./modules/vaccine-certification/VaccineCertificationModule";
 import VenuesModule from "./modules/venues/VenuesModule";
 
-const Profile = (): JSX.Element => {
-  const { user } = useStore();
+const Profile = observer(
+  (): JSX.Element => {
+    const { user } = useStore();
 
-  const renderProfileModules = useCallback(() => {
-    switch (user.type) {
-      case UserType.GENERAL:
-        return (
-          <>
-            <RolloutEstimateModule />
-            <VaccineCertificationModule />
-          </>
-        );
-      case UserType.VENUE_ADMIN:
-        return (
-          <>
-            <VenuesModule />
-          </>
-        );
-    }
-  }, []);
+    const renderProfileModules = useCallback(() => {
+      switch (user.type) {
+        case UserType.GENERAL:
+          return (
+            <>
+              <RolloutEstimateModule />
+              <VaccineCertificationModule />
+            </>
+          );
+        case UserType.VENUE_ADMIN:
+          return (
+            <>
+              <VenuesModule />
+            </>
+          );
+      }
+    }, []);
 
-  return (
-    <Content>
-      <Column width={1 / 2}>
-        <ProfileModule />
-        {renderProfileModules()}
-      </Column>
-    </Content>
-  );
-};
+    return (
+      <Content>
+        <Column width={1 / 2}>
+          <ProfileModule />
+          {renderProfileModules()}
+        </Column>
+      </Content>
+    );
+  }
+);
 
 export default Profile;
