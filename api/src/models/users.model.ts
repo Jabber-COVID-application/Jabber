@@ -1,5 +1,5 @@
 import { model, Schema, Document } from 'mongoose';
-import { User, UserType } from '@interfaces/users.interface';
+import { RolloutPhase, User, UserType } from '@interfaces/users.interface';
 import { AddressSchema } from '@models/misc.model';
 
 /* User Data Model
@@ -22,11 +22,21 @@ import { AddressSchema } from '@models/misc.model';
  *  postCode
  *  state
  *
- * medical (protected, optional)
- *  conditions[]
- *  medications[]
- *
- * visitedLocations[]
+ * rolloutDetails
+ *  age (already have)
+ *  phaseOneA
+ *    frontLineWorker
+ *    agedCareDisabilityWorker
+ *    agedCareDisabilityResident
+ *  phaseOneB
+ *    highRiskWorker
+ *    careWorker
+ *    disability
+ *    medicalCondition
+ *    closeContact
+ *    essentialTravel
+ *  phase2a
+ *    aboriginalOrTorresStrait
  *
  */
 
@@ -52,6 +62,56 @@ const UserDetailsSchema: Schema = new Schema(
   { _id: false },
 );
 
+const RolloutDetailsSchema: Schema = new Schema(
+  {
+    phase: {
+      type: RolloutPhase,
+      required: false,
+    },
+    frontLineWorker: {
+      type: Boolean,
+      required: true,
+    },
+    agedCareDisabilityWorker: {
+      type: Boolean,
+      required: true,
+    },
+    agedCareDisabilityResident: {
+      type: Boolean,
+      required: true,
+    },
+    highRiskWorker: {
+      type: Boolean,
+      required: true,
+    },
+    careWorker: {
+      type: Boolean,
+      required: true,
+    },
+    disability: {
+      type: Boolean,
+      required: true,
+    },
+    medicalCondition: {
+      type: Boolean,
+      required: true,
+    },
+    closeContact: {
+      type: Boolean,
+      required: true,
+    },
+    essentialTravel: {
+      type: Boolean,
+      required: true,
+    },
+    aboriginalOrTorresStrait: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  { _id: false },
+);
+
 const UserSchema: Schema = new Schema({
   email: {
     type: String,
@@ -65,6 +125,7 @@ const UserSchema: Schema = new Schema({
   type: {
     type: UserType,
     required: true,
+    immutable: true,
   },
   active: {
     type: Boolean,
@@ -76,6 +137,10 @@ const UserSchema: Schema = new Schema({
   },
   address: {
     type: AddressSchema,
+    required: false,
+  },
+  rolloutDetails: {
+    type: RolloutDetailsSchema,
     required: false,
   },
 });

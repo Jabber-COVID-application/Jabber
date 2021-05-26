@@ -7,6 +7,14 @@ export enum UserType {
   SUPER_ADMIN = 'SUPER_ADMIN',
 }
 
+export enum RolloutPhase {
+  PHASE_1A = 'PHASE_1A',
+  PHASE_1B = 'PHASE_1B',
+  PHASE_2A = 'PHASE_2A',
+  PHASE_2B = 'PHASE_2B',
+  PHASE_3 = 'PHASE_3',
+}
+
 export interface User {
   _id: string;
   email: string;
@@ -15,6 +23,7 @@ export interface User {
   active: boolean;
   userDetails?: UserDetails;
   userAddress?: Address;
+  rolloutDetails?: RolloutDetails;
 }
 
 export interface UserDetails {
@@ -22,4 +31,18 @@ export interface UserDetails {
   middleName?: string;
   lastName: string;
   dateOfBirth: Date;
+}
+
+export interface RolloutDetails {
+  phase?: RolloutPhase;
+  frontLineWorker: boolean;
+  agedCareDisabilityWorker: boolean;
+  agedCareDisabilityResident: boolean;
+  highRiskWorker: boolean;
+  careWorker: boolean;
+  disability: boolean;
+  medicalCondition: boolean;
+  closeContact: boolean;
+  essentialTravel: boolean;
+  aboriginalOrTorresStrait: boolean;
 }

@@ -30,7 +30,7 @@ export const RedirectCatchPathAttempt = (props: RedirectProps): JSX.Element => {
 export const RedirectToPathAttempt = (props: RedirectProps): JSX.Element => {
   const { pathAttempt } = usePathAttempt();
 
-  return pathAttempt ? (
+  return pathAttempt && pathAttempt !== "" ? (
     <Redirect {...props} to={pathAttempt} />
   ) : (
     <Redirect {...props} />

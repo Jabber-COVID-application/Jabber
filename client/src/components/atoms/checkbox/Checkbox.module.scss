@@ -1,0 +1,45 @@
+@use '../../../assets/styles/abstracts/fonts';
+@use '../../../assets/styles/abstracts/colors';
+
+.wrapper {
+  @include fonts.h6;
+  @include fonts.regular;
+
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: colors.$bg-80;
+  align-items: center;
+
+  .input {
+    .fakeInput {
+      width: 24px;
+      height: 24px;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      background: colors.$bg-60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .tick {
+        opacity: 0;
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .fakeInput {
+        background: colors.$bittersweet-110;
+
+        .tick {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

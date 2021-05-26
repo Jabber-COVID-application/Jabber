@@ -15,6 +15,7 @@ import PathAttemptProvider, {
   RedirectCatchPathAttempt,
   RedirectToPathAttempt,
 } from "./components/routing/path-attempt/PathAttempt";
+import RolloutDetailsForm from "./pages/rollout/rollout-details/RolloutDetailsForm";
 
 const App = observer(
   (): JSX.Element => {
@@ -29,6 +30,11 @@ const App = observer(
                 <Switch>
                   <Route path="/dashboard" component={Dashboard} exact />
                   <Route path="/rollout" component={Rollout} exact />
+                  <Route
+                    path="/rollout/details"
+                    component={RolloutDetailsForm}
+                    exact
+                  />
                   <Route path="/profile" component={Profile} exact />
                   <Route path="/visit/:venueId" component={Visit} exact />
                   <RedirectToPathAttempt to="/dashboard" />

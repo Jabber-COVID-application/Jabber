@@ -1,9 +1,23 @@
 @use "../../../../assets/styles/abstracts/colors";
 @use "../../../../assets/styles/abstracts/fonts";
 
+h5 {
+  margin: 0 0 0.75rem;
+  text-align: left !important;
+}
+
 .text {
   @include fonts.callout;
   @include fonts.regular;
 
   color: colors.$bg-100;
+}
+
+.textSmall {
+  @include fonts.callout;
+  @include fonts.regular;
+
+  text-align: left !important;
+  margin: 0 0 1.5rem;
+  color: colors.$bg-80;
 }

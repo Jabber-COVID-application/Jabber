@@ -1,0 +1,50 @@
+@use "../../../../assets/styles/abstracts/colors";
+@use "../../../../assets/styles/abstracts/fonts";
+@use "sass:color";
+
+.progress {
+  counter-reset: progress-bar;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  .step {
+    flex: 0 0 auto;
+    display: flex;
+
+    &::before {
+      @include fonts.bold;
+
+      counter-increment: progress-bar;
+      content: counter(progress-bar);
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 3px solid colors.$bittersweet-110;
+      background: color.adjust(colors.$bittersweet-110, $alpha: -0.9);
+      color: colors.$bittersweet-110;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.completed {
+      &::before {
+        background: colors.$bittersweet-110;
+        color: colors.$bg-20;
+      }
+    }
+  }
+
+  .line {
+    flex: 1 1 100%;
+    height: 3px;
+    background: colors.$bg-60;
+    border-radius: 3px;
+
+    &.completed {
+      background: colors.$bittersweet-110;
+    }
+  }
+}
