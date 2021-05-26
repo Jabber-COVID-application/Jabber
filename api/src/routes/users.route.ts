@@ -1,8 +1,11 @@
 import { Router } from 'express';
 import UsersController from '@controllers/users.controller';
-import { CreateUserValidator } from '@dtos/users.dto';
+import { CreateUserValidator, UpdateUserValidator } from '@dtos/users.dto';
 import Route from '@interfaces/routes.interface';
 import validationMiddleware from '@middlewares/validation.middleware';
+import permissionsMiddleware from '@middlewares/permissions.middleware';
+import { UserType } from '@interfaces/users.interface';
+import authMiddleware from '@middlewares/auth.middleware';
 
 class UsersRoute implements Route {
   public path = '/users';
@@ -14,19 +17,38 @@ class UsersRoute implements Route {
   }
 
   private initializeRoutes() {
-    this.router.get('', this.usersController.getUsers);
-    this.router.get('/:id', this.usersController.getUserById);
+    this.router.get(
+      '',
+      authMiddleware,
+      permissionsMiddleware([UserType.SUPER_ADMIN]),
+      this.usersController.getUsers,
+    );
+    this.router.get(
+      '/:id',
+      authMiddleware,
+      permissionsMiddleware([UserType.SUPER_ADMIN]),
+      this.usersController.getUserById,
+    );
     this.router.post(
       '',
+      authMiddleware,
+      permissionsMiddleware([UserType.SUPER_ADMIN]),
       validationMiddleware(CreateUserValidator, 'body'),
       this.usersController.createUser,
     );
     this.router.put(
       '/:id',
-      validationMiddleware(CreateUserValidator, 'body'),
+      authMiddleware,
+      permissionsMiddleware([UserType.SUPER_ADMIN], true),
+      validationMiddleware(UpdateUserValidator, 'body'),
       this.usersController.updateUser,
     );
-    this.router.delete('/:id', this.usersController.deleteUser);
+    this.router.delete(
+      '/:id',
+      authMiddleware,
+      permissionsMiddleware([UserType.SUPER_ADMIN]),
+      this.usersController.deleteUser,
+    );
   }
 }
 

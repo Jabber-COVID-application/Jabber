@@ -10,15 +10,9 @@ const Dashboard = (): JSX.Element => {
     <Content>
       <Column width={2 / 3}>
         <QuickStatsModule />
-        <Card size="packed" label="Quick Stats">
-          <h4>Login</h4>
-        </Card>
       </Column>
       <Column width={2 / 5}>
         <RolloutEstimateModule />
-        <Card size="packed" label="Rollout Estimate">
-          <h4>Login</h4>
-        </Card>
       </Column>
     </Content>
   );

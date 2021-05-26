@@ -1,0 +1,40 @@
+@use "../../../assets/styles/abstracts/colors";
+@use "../../../assets/styles/abstracts/fonts";
+
+.card {
+  gap: 1rem;
+
+  form {
+    > * {
+      text-align: left !important;
+      margin: 0;
+    }
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    p,
+    li {
+      @include fonts.regular;
+
+      color: colors.$bg-80;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      > * {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

@@ -1,7 +1,14 @@
 import { RootStore } from "./root";
 import { makeAutoObservable } from "mobx";
-import { User, UserDetails, UserType, Visit } from "../types/user.types";
+import {
+  RolloutDetails,
+  User,
+  UserDetails,
+  UserType,
+} from "../types/user.types";
 import { Address } from "../types/misc.types";
+import axiosInstance from "../transport";
+import { Venue } from "../types/venue.types";
 
 export class UserStore {
   root: RootStore;
@@ -12,6 +19,7 @@ export class UserStore {
 
   userDetails?: UserDetails;
   userAddress?: Address;
+  rolloutDetails?: RolloutDetails;
 
   constructor(root: RootStore) {
     makeAutoObservable(this);
@@ -25,6 +33,18 @@ export class UserStore {
     if (user.type) this.type = user.type;
     if (user.userDetails) this.userDetails = user.userDetails;
     if (user.userAddress) this.userAddress = user.userAddress;
+    if (user.rolloutDetails) this.rolloutDetails = user.rolloutDetails;
+  }
+
+  async update(user: UpdateUserRequest) {
+    return axiosInstance
+      .put(`/users/${this.id}`, user)
+      .then(({ status, data }) => {
+        if (status !== 200) throw new Error("User not found");
+
+        const user: User = data.data;
+        this.populate(user);
+      });
   }
 
   clear() {
@@ -33,6 +53,7 @@ export class UserStore {
     this.type = undefined;
     this.userDetails = undefined;
     this.userAddress = undefined;
+    this.rolloutDetails = undefined;
   }
 
   get fullName() {
@@ -40,4 +61,12 @@ export class UserStore {
       this.userDetails?.lastName || ""
     }`;
   }
+}
+
+interface UpdateUserRequest {
+  email?: string;
+  password?: string;
+  userDetails?: UserDetails;
+  userAddress?: Address;
+  rolloutDetails?: RolloutDetails;
 }
