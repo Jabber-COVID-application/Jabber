@@ -96,6 +96,18 @@ class UserService {
     return getVisits;
   }
 
+  public async certifyUser(userId: string, certifierId: string): Promise<User> {
+    let user = await this.users.findById(userId);
+    if (!user) throw new HttpException(409, "User doesn't exist");
+
+    user.vaccineCertification = {
+      certifier: certifierId,
+      date: new Date(),
+    };
+
+    return user.save();
+  }
+
   private cleanRolloutDetails(rolloutDetails: RolloutDetails) {
     return Object.entries(rolloutDetails).reduce<RolloutDetails>(
       (acc, [key, val]) => {

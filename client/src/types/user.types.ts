@@ -24,6 +24,7 @@ export interface User {
   userDetails?: UserDetails;
   userAddress?: Address;
   rolloutDetails?: RolloutDetails;
+  vaccineCertification?: VaccineCertification;
 }
 
 export interface UserDetails {
@@ -45,4 +46,9 @@ export interface RolloutDetails {
   closeContact: boolean;
   essentialTravel: boolean;
   aboriginalOrTorresStrait: boolean;
+}
+
+export interface VaccineCertification {
+  certifier: string;
+  date: Date;
 }

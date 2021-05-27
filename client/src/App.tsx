@@ -18,6 +18,7 @@ import {
 import RolloutDetailsForm from "./pages/rollout/rollout-details/RolloutDetailsForm";
 import Visits from "./pages/visits/Visits";
 import Scan from "./pages/visits/scan/Scan";
+import Certification from "./pages/certification/Certification";
 
 const App = observer(
   (): JSX.Element => {
@@ -40,6 +41,11 @@ const App = observer(
                 <Route path="/visits" component={Visits} exact />
                 <Route path="/visits/scan" component={Scan} exact />
                 <Route path="/visits/:venueId" component={Checkin} exact />
+                <Route
+                  path="/certification/:userId"
+                  component={Certification}
+                  exact
+                />
                 <RedirectToPathAttempt to="/dashboard" />
               </Switch>
             </SidebarLayout>

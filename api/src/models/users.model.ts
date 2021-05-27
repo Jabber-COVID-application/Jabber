@@ -62,6 +62,20 @@ const UserDetailsSchema: Schema = new Schema(
   { _id: false },
 );
 
+const VaccineCertificationSchema: Schema = new Schema(
+  {
+    certifier: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    date: {
+      type: Date,
+      required: true,
+    },
+  },
+  { _id: false },
+);
+
 const RolloutDetailsSchema: Schema = new Schema(
   {
     phase: {
@@ -141,6 +155,10 @@ const UserSchema: Schema = new Schema({
   },
   rolloutDetails: {
     type: RolloutDetailsSchema,
+    required: false,
+  },
+  vaccineCertification: {
+    type: VaccineCertificationSchema,
     required: false,
   },
 });

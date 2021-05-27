@@ -26,7 +26,11 @@ class UsersRoute implements Route {
     this.router.get(
       '/:id',
       authMiddleware,
-      permissionsMiddleware([UserType.SUPER_ADMIN]),
+      permissionsMiddleware([
+        UserType.VENUE_ADMIN,
+        UserType.VACCINE_ADMIN,
+        UserType.SUPER_ADMIN,
+      ]),
       this.usersController.getUserById,
     );
     this.router.post(
@@ -54,6 +58,12 @@ class UsersRoute implements Route {
       authMiddleware,
       permissionsMiddleware([UserType.SUPER_ADMIN], true),
       this.usersController.getUserVisitsById,
+    );
+    this.router.post(
+      '/:id/certify',
+      authMiddleware,
+      permissionsMiddleware([UserType.VACCINE_ADMIN]),
+      this.usersController.certifyUser,
     );
   }
 }
