@@ -66,6 +66,10 @@ export class VenueStore {
       return false;
     });
   }
+
+  clear() {
+    this.venues = {};
+  }
 }
 
 export interface CreateVenueRequest {

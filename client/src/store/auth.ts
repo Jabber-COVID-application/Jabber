@@ -61,6 +61,9 @@ export class AuthStore {
       .then(({ status, data }) => {
         if (status === 200) {
           this.isAuthenticated = false;
+          this.root.user.clear();
+          this.root.venues.clear();
+          this.root.visits.clear();
         }
       })
       .catch((e) => console.error(e));
