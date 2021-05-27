@@ -5,6 +5,7 @@ import { StatsStore } from "./stats";
 import { UIStore } from "./ui";
 import { VenueStore } from "./venues";
 import { VisitsStore } from "./visits";
+import { CertificationStore } from "./certification";
 
 export class RootStore {
   ui: UIStore;
@@ -13,6 +14,7 @@ export class RootStore {
   stats: StatsStore;
   venues: VenueStore;
   visits: VisitsStore;
+  certification: CertificationStore;
 
   constructor() {
     makeAutoObservable(this);
@@ -23,5 +25,6 @@ export class RootStore {
     this.stats = new StatsStore(this);
     this.venues = new VenueStore(this);
     this.visits = new VisitsStore(this);
+    this.certification = new CertificationStore(this);
   }
 }

@@ -5,6 +5,7 @@ import {
   User,
   UserDetails,
   UserType,
+  VaccineCertification,
 } from "../types/user.types";
 import { Address } from "../types/misc.types";
 import axiosInstance from "../transport";
@@ -19,6 +20,7 @@ export class UserStore {
   userDetails?: UserDetails;
   userAddress?: Address;
   rolloutDetails?: RolloutDetails;
+  vaccineCertification?: VaccineCertification;
 
   constructor(root: RootStore) {
     makeAutoObservable(this);
@@ -33,6 +35,8 @@ export class UserStore {
     if (user.userDetails) this.userDetails = user.userDetails;
     if (user.userAddress) this.userAddress = user.userAddress;
     if (user.rolloutDetails) this.rolloutDetails = user.rolloutDetails;
+    if (user.vaccineCertification)
+      this.vaccineCertification = user.vaccineCertification;
   }
 
   async update(user: UpdateUserRequest) {
@@ -53,6 +57,7 @@ export class UserStore {
     this.userDetails = undefined;
     this.userAddress = undefined;
     this.rolloutDetails = undefined;
+    this.vaccineCertification = undefined;
   }
 
   get fullName() {

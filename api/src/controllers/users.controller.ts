@@ -3,6 +3,7 @@ import { CreateUserDto } from '@dtos/users.dto';
 import { User } from '@interfaces/users.interface';
 import UserService from '@services/users.service';
 import { Visit } from '@/interfaces/visits.interface';
+import { RequestWithUser } from '@/interfaces/auth.interface';
 
 class UsersController {
   public userService = new UserService();
@@ -68,6 +69,26 @@ class UsersController {
       const findVisits: Visit[] = await this.userService.findUserVisits(userId);
 
       res.status(200).json({ data: findVisits, message: 'findAll' });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public certifyUser = async (
+    req: RequestWithUser,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      const userId: string = req.user._id;
+      const targetUserId: string = req.params.id;
+
+      const certifyUserData: User = await this.userService.certifyUser(
+        targetUserId,
+        userId,
+      );
+
+      res.status(200).json({ data: certifyUserData, message: 'certifiedUser' });
     } catch (error) {
       next(error);
     }
