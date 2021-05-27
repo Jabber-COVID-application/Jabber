@@ -14,7 +14,6 @@ import YupPassword from "yup-password";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Column from "../../components/atoms/column/Column";
 import Content from "../../components/atoms/content/Content";
-import { usePathAttempt } from "../../components/routing/path-attempt/PathAttempt";
 
 YupPassword(yup);
 

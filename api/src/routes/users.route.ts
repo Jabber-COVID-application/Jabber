@@ -49,6 +49,12 @@ class UsersRoute implements Route {
       permissionsMiddleware([UserType.SUPER_ADMIN]),
       this.usersController.deleteUser,
     );
+    this.router.get(
+      '/:id/visits',
+      authMiddleware,
+      permissionsMiddleware([UserType.SUPER_ADMIN], true),
+      this.usersController.getUserVisitsById,
+    );
   }
 }
 

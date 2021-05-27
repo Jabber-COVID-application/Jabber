@@ -3,6 +3,7 @@ import styles from "./Sidebar.module.scss";
 import { ReactComponent as Logo } from "../../../assets/svgs/logo.svg";
 import DashboardIcon from "../../../assets/svgs/dashboard.svg";
 import RolloutIcon from "../../../assets/svgs/rollout.svg";
+import VisitsIcon from "../../../assets/svgs/visits.svg";
 import UserIcon from "../../../assets/images/user.png";
 import SidebarItem from "./sidebar-item/SidebarItem";
 import { observer } from "mobx-react";
@@ -38,6 +39,12 @@ const Sidebar = observer(
         icon: RolloutIcon,
         text: "Rollout",
         action: () => history.push("/rollout"),
+      },
+      {
+        path: "/visits",
+        icon: VisitsIcon,
+        text: "Visits",
+        action: () => history.push("/visits"),
       },
     ]);
 

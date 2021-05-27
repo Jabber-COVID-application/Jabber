@@ -1,20 +1,16 @@
-import React from "react";
-import Content from "../../components/atoms/content/Content";
-import Column from "../../components/atoms/column/Column";
+import React, { useCallback, useEffect, useState } from "react";
+import Content from "../../../components/atoms/content/Content";
+import Column from "../../../components/atoms/column/Column";
 import { observer } from "mobx-react";
 import { useHistory, useParams } from "react-router-dom";
-import { useStore } from "../../store";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useStore } from "../../../store";
 import InitialHeader from "./components/initial-header/InitialHeader";
-import { useCallback } from "react";
-import Card from "../../components/atoms/card/Card";
-import Button from "../../components/atoms/button/Button";
-import styles from "./Visit.module.scss";
+import Card from "../../../components/atoms/card/Card";
+import Button from "../../../components/atoms/button/Button";
+import styles from "./Checkin.module.scss";
 import CheckedInHeader from "./components/checked-in-header/CheckedInHeader";
 import TimeRange from "./components/time-range/TimeRange";
-import Loader from "../../components/layout/loader/Loader";
-import Spinner from "../../components/layout/loader/spinner/Spinner";
+import Spinner from "../../../components/layout/loader/spinner/Spinner";
 
 interface Params {
   venueId: string;
@@ -28,7 +24,7 @@ enum VisitStatus {
   CHECKED_OUT = "CHECKED_OUT",
 }
 
-const Visit = observer(
+const Checkin = observer(
   (): JSX.Element => {
     const { venues, visits } = useStore();
     const { venueId } = useParams<Params>();
@@ -134,4 +130,4 @@ const Visit = observer(
   }
 );
 
-export default Visit;
+export default Checkin;

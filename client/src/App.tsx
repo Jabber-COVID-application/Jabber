@@ -10,12 +10,14 @@ import Rollout from "./pages/rollout/Rollout";
 import SidebarLayout from "./components/layout/sidebar-layout/SidebarLayout";
 import Profile from "./pages/profile/Profile";
 import Loader from "./components/layout/loader/Loader";
-import Visit from "./pages/visit/Visit";
-import PathAttemptProvider, {
+import Checkin from "./pages/visits/checkin/Checkin";
+import {
   RedirectCatchPathAttempt,
   RedirectToPathAttempt,
 } from "./components/routing/path-attempt/PathAttempt";
 import RolloutDetailsForm from "./pages/rollout/rollout-details/RolloutDetailsForm";
+import Visits from "./pages/visits/Visits";
+import Scan from "./pages/visits/scan/Scan";
 
 const App = observer(
   (): JSX.Element => {
@@ -24,30 +26,30 @@ const App = observer(
     return (
       <BrowserRouter>
         <Loader loading={ui.isLoading}>
-          <PathAttemptProvider>
-            {auth.isAuthenticated ? (
-              <SidebarLayout>
-                <Switch>
-                  <Route path="/dashboard" component={Dashboard} exact />
-                  <Route path="/rollout" component={Rollout} exact />
-                  <Route
-                    path="/rollout/details"
-                    component={RolloutDetailsForm}
-                    exact
-                  />
-                  <Route path="/profile" component={Profile} exact />
-                  <Route path="/visit/:venueId" component={Visit} exact />
-                  <RedirectToPathAttempt to="/dashboard" />
-                </Switch>
-              </SidebarLayout>
-            ) : (
+          {auth.isAuthenticated ? (
+            <SidebarLayout>
               <Switch>
-                <Route path="/login" component={Login} exact />
-                <Route path="/signup" component={Signup} exact />
-                <RedirectCatchPathAttempt to="/login" />
+                <Route path="/dashboard" component={Dashboard} exact />
+                <Route path="/rollout" component={Rollout} exact />
+                <Route
+                  path="/rollout/details"
+                  component={RolloutDetailsForm}
+                  exact
+                />
+                <Route path="/profile" component={Profile} exact />
+                <Route path="/visits" component={Visits} exact />
+                <Route path="/visits/scan" component={Scan} exact />
+                <Route path="/visits/:venueId" component={Checkin} exact />
+                <RedirectToPathAttempt to="/dashboard" />
               </Switch>
-            )}
-          </PathAttemptProvider>
+            </SidebarLayout>
+          ) : (
+            <Switch>
+              <Route path="/login" component={Login} exact />
+              <Route path="/signup" component={Signup} exact />
+              <RedirectCatchPathAttempt to="/login" />
+            </Switch>
+          )}
         </Loader>
       </BrowserRouter>
     );

@@ -16,14 +16,14 @@ export const userTypePrettyName = (type: UserType) => {
 export const phaseToRolloutEstimate = (phase: RolloutPhase): string => {
   switch (phase) {
     case RolloutPhase.PHASE_1A:
-      return "20th February";
+      return "20th February, 2021";
     case RolloutPhase.PHASE_1B:
-      return "22nd March";
+      return "22nd March, 2021";
     case RolloutPhase.PHASE_2A:
-      return "3rd May";
+      return "3rd May, 2021";
     case RolloutPhase.PHASE_2B:
-      return "1st August";
+      return "1st August, 2021";
     case RolloutPhase.PHASE_3:
-      return "November 1st";
+      return "November 1st, 2021";
   }
 };

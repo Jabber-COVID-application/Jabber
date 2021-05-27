@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Modal from "../../../../../../components/layout/modal/Modal";
 import QRCode from "qrcode.react";
-import { useRef } from "react";
 import Button from "../../../../../../components/atoms/button/Button";
 import { useReactToPrint } from "react-to-print";
 import styles from "./VenueQRModal.module.scss";
@@ -28,7 +27,7 @@ const VenueQRModal = (props: Props): JSX.Element => {
         <h4 className={styles.name}>{name}</h4>
         <p className={styles.address}>{address}</p>
         <QRCode
-          value={`https://www.jabber.com/checkin/${id}`}
+          value={`https://www.jabb3r.com/visits/${id}`}
           renderAs="svg"
           size={512}
           bgColor="transparent"
