@@ -21,7 +21,9 @@ const Scan = (): JSX.Element => {
     console.log(matches);
 
     if (matches) {
-      history.push(matches[0]);
+      const path = matches[0].replace("https://www.jabb3r.com", "");
+
+      history.push(path);
     }
   };
 

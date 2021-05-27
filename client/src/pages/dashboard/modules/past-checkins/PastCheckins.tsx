@@ -8,12 +8,15 @@ import styles from "./PastCheckins.module.scss";
 import { useCallback } from "react";
 import { observer } from "mobx-react";
 import { autorun } from "mobx";
+import Button from "../../../../components/atoms/button/Button";
+import { useHistory } from "react-router-dom";
 
 interface Props {}
 
 const PastCheckins = observer(
   (props: Props): JSX.Element => {
     const { visits, venues } = useStore();
+    const history = useHistory();
 
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -73,6 +76,13 @@ const PastCheckins = observer(
         ) : (
           <div className={styles.checkins}>{renderCheckins()}</div>
         )}
+        <Button
+          onClick={() => history.push("/visits/scan")}
+          size="small"
+          styleType="outline"
+        >
+          Add visit
+        </Button>
       </Card>
     );
   }
