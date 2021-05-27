@@ -59,6 +59,65 @@ class StatsService {
         } as GetStatsResponse;
       });
   }
+
+  public async getStatsAccurate(): Promise<GetStatsResponse> {
+    return axios
+      .request({
+        url:
+          'https://corona.lmao.ninja/v2/countries/Australia?yesterday=true&strict=true&query',
+      })
+      .then(({ status, data }) => {
+        if (status === 200) {
+          // const statsByState = data.features.reduce(
+          //   (accumulator: StatsByState, current: any) => {
+          //     const state: Stats = {
+          //       cases: current.attributes.Cases,
+          //       deaths: current.attributes.Deaths,
+          //       tests: current.attributes.Tests,
+          //     };
+          //
+          //     accumulator[current.attributes.NAME] = state;
+          //
+          //     return accumulator;
+          //   },
+          //   {},
+          // );
+
+          // const nationalStats = Object.values(statsByState).reduce<Stats>(
+          //   (accumulator: Stats, current: Stats) => {
+          //     return {
+          //       cases: accumulator.cases + current.cases,
+          //       deaths: accumulator.deaths + current.deaths,
+          //       tests: accumulator.tests + current.tests,
+          //     };
+          //   },
+          //   {
+          //     cases: 0,
+          //     deaths: 0,
+          //     tests: 0,
+          //   },
+          // );
+
+          const stats: GetStatsResponse = {
+            nationalStats: { cases: data.cases, deaths: data.deaths, tests: data.tests },
+            statsByState: {},
+          };
+
+          return stats;
+        }
+      })
+      .catch(e => {
+        console.error(e);
+        return {
+          nationalStats: {
+            cases: 0,
+            deaths: 0,
+            tests: 0,
+          },
+          statsByState: {},
+        } as GetStatsResponse;
+      });
+  }
 }
 
 export default StatsService;
