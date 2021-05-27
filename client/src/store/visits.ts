@@ -77,4 +77,8 @@ export class VisitsStore {
         return visit._id;
       });
   }
+
+  clear() {
+    this.visits = {};
+  }
 }
