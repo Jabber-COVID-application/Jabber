@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./VenueItem.module.scss";
 import VenueQRModal from "./venue-qr-modal/VenueQRModal";
 

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Modal from "../../../../../../components/layout/modal/Modal";
 import QRCode from "qrcode.react";
-import { useRef } from "react";
 import Button from "../../../../../../components/atoms/button/Button";
 import { useReactToPrint } from "react-to-print";
 import styles from "./VenueQRModal.module.scss";

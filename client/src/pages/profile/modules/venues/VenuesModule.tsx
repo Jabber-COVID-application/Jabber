@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../../../../components/atoms/card/Card";
 import Button from "../../../../components/atoms/button/Button";
 import { useStore } from "../../../../store";
 import styles from "./VenuesModule.module.scss";
 import CreateVenueModal from "./create-venue-modal/CreateVenueModal";
-import { useState } from "react";
 import { observer } from "mobx-react";
 import VenueItem from "./venue-item/VenueItem";
 

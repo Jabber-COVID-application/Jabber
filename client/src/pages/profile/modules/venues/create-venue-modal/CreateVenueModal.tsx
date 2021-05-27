@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Button from "../../../../../components/atoms/button/Button";
 import { useStore } from "../../../../../store";
 import styles from "./CreateVenueModal.module.scss";
 import Modal from "../../../../../components/layout/modal/Modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { CreateVenueRequest } from "../../../../../store/venues";
 import * as yup from "yup";
 import Input from "../../../../../components/atoms/input/Input";
-import Card from "../../../../../components/atoms/card/Card";
 import PlacesInput from "../../../../../components/atoms/places-input/PlacesInput";
-import { useState } from "react";
 import { getGeocode, Suggestion } from "use-places-autocomplete";
-import { log } from "util";
 
 const createVenueSchema = yup.object().shape({
   name: yup.string().required("Required"),

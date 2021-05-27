@@ -1,6 +1,5 @@
 import { observer } from "mobx-react";
 import React from "react";
-import { useEffect } from "react";
 import { useStore } from "../../../../store";
 import styles from "./InitialHeader.module.scss";
 

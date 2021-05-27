@@ -1,10 +1,7 @@
 import { observer } from "mobx-react";
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useStore } from "../../../../store";
 import styles from "./TimeRange.module.scss";
-import BigTick from "../../../../assets/svgs/big-tick.svg";
-import { useState } from "react";
 import { autorun } from "mobx";
 
 interface Props {
