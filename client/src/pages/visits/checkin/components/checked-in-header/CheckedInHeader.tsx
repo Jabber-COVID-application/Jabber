@@ -1,8 +1,8 @@
 import { observer } from "mobx-react";
 import React, { useState } from "react";
-import { useStore } from "../../../../store";
+import { useStore } from "../../../../../store";
 import styles from "./CheckedInHeader.module.scss";
-import BigTick from "../../../../assets/svgs/big-tick.svg";
+import BigTick from "../../../../../assets/svgs/big-tick.svg";
 
 interface Props {
   venue: string;

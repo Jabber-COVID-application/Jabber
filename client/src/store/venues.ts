@@ -29,6 +29,10 @@ export class VenueStore {
     });
   }
 
+  async fetchVenues(venueIds: string[]): Promise<void[]> {
+    return Promise.all(venueIds.map((venueId) => this.fetchVenue(venueId)));
+  }
+
   fetchOwnedVenues() {
     axiosInstance.get("/venues").then(({ status, data }) => {
       if (status === 200) {

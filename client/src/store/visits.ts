@@ -2,6 +2,7 @@ import { makeAutoObservable } from "mobx";
 import { RootStore } from "./root";
 import axiosInstance from "../transport";
 import { Visit, Visits } from "../types/visit.types";
+import { User } from "../types/user.types";
 
 export class VisitsStore {
   root: RootStore;
@@ -26,6 +27,31 @@ export class VisitsStore {
 
       return visit._id;
     });
+  }
+
+  async fetchVisits() {
+    return axiosInstance
+      .get(`/users/${this.root.user.id}/visits`)
+      .then(({ status, data }) => {
+        if (status !== 200) throw new Error("User not found");
+
+        const visits: Visit[] = data.data;
+        visits.forEach((visit) => {
+          this.addVisit(visit);
+        });
+
+        const venues: string[] = visits.map((visit) => visit.venue);
+
+        return this.root.venues.fetchVenues(venues);
+      });
+  }
+
+  get visitsSorted() {
+    const visits = Object.values(this.visits);
+    visits.sort(
+      (a, b) => new Date(a.checkin).getTime() - new Date(b.checkin).getTime()
+    );
+    return visits;
   }
 
   async checkIn(venueId: string) {

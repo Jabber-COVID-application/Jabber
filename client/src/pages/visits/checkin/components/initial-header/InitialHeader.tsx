@@ -1,6 +1,6 @@
 import { observer } from "mobx-react";
 import React from "react";
-import { useStore } from "../../../../store";
+import { useStore } from "../../../../../store";
 import styles from "./InitialHeader.module.scss";
 
 interface Props {

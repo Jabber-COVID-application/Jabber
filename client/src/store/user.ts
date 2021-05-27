@@ -8,7 +8,6 @@ import {
 } from "../types/user.types";
 import { Address } from "../types/misc.types";
 import axiosInstance from "../transport";
-import { Venue } from "../types/venue.types";
 
 export class UserStore {
   root: RootStore;

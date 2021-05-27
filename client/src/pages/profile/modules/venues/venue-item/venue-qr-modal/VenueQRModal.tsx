@@ -27,7 +27,7 @@ const VenueQRModal = (props: Props): JSX.Element => {
         <h4 className={styles.name}>{name}</h4>
         <p className={styles.address}>{address}</p>
         <QRCode
-          value={`https://www.jabber.com/checkin/${id}`}
+          value={`https://www.jabb3r.com/visits/${id}`}
           renderAs="svg"
           size={512}
           bgColor="transparent"

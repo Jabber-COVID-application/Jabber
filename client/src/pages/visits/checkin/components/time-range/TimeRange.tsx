@@ -1,6 +1,6 @@
 import { observer } from "mobx-react";
 import React, { useEffect, useState } from "react";
-import { useStore } from "../../../../store";
+import { useStore } from "../../../../../store";
 import styles from "./TimeRange.module.scss";
 import { autorun } from "mobx";
 

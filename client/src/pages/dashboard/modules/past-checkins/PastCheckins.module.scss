@@ -1,0 +1,70 @@
+@use "../../../../assets/styles/abstracts/colors";
+@use "../../../../assets/styles/abstracts/fonts";
+
+
+.pastCheckins {
+  .checkins {
+    display: flex;
+    flex-direction: column;
+
+    .noCheckins {
+      @include fonts.h6;
+      @include fonts.regular;
+
+      color: colors.$bg-80;
+      margin: 0;
+    }
+
+    .checkin {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid colors.$bg-50;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+
+        &.right {
+          gap: 0.5rem;
+          align-items: flex-end;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .venueName {
+          @include fonts.h6;
+          @include fonts.medium;
+        }
+
+        .venueAddress {
+          @include fonts.subhead;
+          @include fonts.regular;
+
+          color: colors.$bg-80;
+        }
+
+        .visitDate {
+          @include fonts.subhead;
+          @include fonts.regular;
+        }
+
+        .visitTimeRange {
+          @include fonts.label;
+
+          color: colors.$bg-80;
+        }
+      }
+    }
+  }
+}

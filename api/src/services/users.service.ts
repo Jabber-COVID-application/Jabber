@@ -1,12 +1,16 @@
 import bcrypt from 'bcrypt';
 import { CreateUserDto, UpdateUserDto } from '@dtos/users.dto';
 import HttpException from '@exceptions/HttpException';
-import { RolloutPhase, User } from '@interfaces/users.interface';
+import { RolloutDetails, RolloutPhase, User } from '@interfaces/users.interface';
 import userModel from '@models/users.model';
+import visitModel from '@models/visits.model';
 import { isEmpty } from '@utils/util';
+import { Visit } from '@/interfaces/visits.interface';
+import { Model } from 'mongoose';
 
 class UserService {
   public users = userModel;
+  public visits = visitModel;
 
   public async findAllUser(): Promise<User[]> {
     const users: User[] = await this.users.find();
@@ -46,6 +50,10 @@ class UserService {
   public async updateUser(userId: string, userData: UpdateUserDto): Promise<User> {
     if (isEmpty(userData)) throw new HttpException(400, "You're not userData");
 
+    let user = await this.users.findById(userId);
+
+    if (!user) throw new HttpException(409, "You're not user");
+
     if (userData.email) {
       const findUser: User = await this.users.findOne({ email: userData.email });
       if (findUser && findUser._id != userId)
@@ -54,23 +62,23 @@ class UserService {
 
     if (userData.password) {
       const hashedPassword = await bcrypt.hash(userData.password, 10);
-      userData = { ...userData, password: hashedPassword };
+      user.password = hashedPassword;
     }
 
     if (userData.rolloutDetails) {
-      userData.rolloutDetails.phase = await this.getRolloutPhase(userId, userData);
+      const cleanRolloutDetails: RolloutDetails = this.cleanRolloutDetails(
+        userData.rolloutDetails as RolloutDetails,
+      );
+      userData.rolloutDetails = cleanRolloutDetails;
+      cleanRolloutDetails.phase = await this.getRolloutPhase(userId, userData);
+      user.rolloutDetails = cleanRolloutDetails;
     }
 
-    const findUser: User = await this.users.findById(userId);
+    console.log(user, userData);
 
-    const updateUserById: User = await this.users.findByIdAndUpdate(
-      userId,
-      // @ts-ignore
-      { ...findUser, ...userData },
-      { new: true },
-    );
+    const updateUserById: User = await user.save();
 
-    if (!updateUserById) throw new HttpException(409, "You're not user");
+    console.log(updateUserById);
 
     return updateUserById;
   }
@@ -80,6 +88,35 @@ class UserService {
     if (!deleteUserById) throw new HttpException(409, "You're not user");
 
     return deleteUserById;
+  }
+
+  public async findUserVisits(userId: string): Promise<Visit[]> {
+    const getVisits: Visit[] = await this.visits.find({ user: userId });
+
+    return getVisits;
+  }
+
+  private cleanRolloutDetails(rolloutDetails: RolloutDetails) {
+    return Object.entries(rolloutDetails).reduce<RolloutDetails>(
+      (acc, [key, val]) => {
+        if (key !== 'phase' && val == true) {
+          acc[key] = true;
+        }
+        return acc;
+      },
+      {
+        frontLineWorker: false,
+        agedCareDisabilityWorker: false,
+        agedCareDisabilityResident: false,
+        highRiskWorker: false,
+        careWorker: false,
+        disability: false,
+        medicalCondition: false,
+        closeContact: false,
+        essentialTravel: false,
+        aboriginalOrTorresStrait: false,
+      },
+    );
   }
 
   private async getRolloutPhase(
@@ -114,7 +151,7 @@ class UserService {
     if (age >= 50 || (rolloutDetails.aboriginalOrTorresStrait && age >= 16))
       return RolloutPhase.PHASE_2A;
 
-    return age >= 16 ? RolloutPhase.PHASE_2A : RolloutPhase.PHASE_3;
+    return age >= 16 ? RolloutPhase.PHASE_2B : RolloutPhase.PHASE_3;
   }
 
   private static getAge(dateOfBirth: Date): number {

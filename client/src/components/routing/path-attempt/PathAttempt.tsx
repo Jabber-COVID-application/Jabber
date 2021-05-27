@@ -27,7 +27,7 @@ export const RedirectToPathAttempt = (props: RedirectProps): JSX.Element => {
   const { to } = props;
   const location = useLocation<LocationState>();
 
-  if (location.state.referrer) {
+  if (location.state?.referrer) {
     return typeof to === "object" ? (
       <Redirect
         {...props}

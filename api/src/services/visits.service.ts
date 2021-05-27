@@ -23,7 +23,7 @@ class VisitsService {
       .findOne({ user: userId, venue: venueId })
       .sort({ checkin: -1 });
 
-    if (!visit || visit.checkout) throw new HttpException(404, 'No current visit found');
+    if (!visit || visit.checkout) throw new HttpException(404, 'No current visits found');
 
     return visit;
   }
@@ -59,7 +59,7 @@ class VisitsService {
       .sort({ checkin: -1 });
 
     if (existingVisit && existingVisit.checkout)
-      throw new HttpException(409, 'Visit not found');
+      throw new HttpException(409, 'Checkin not found');
 
     const visit: Visit = await this.visits.findByIdAndUpdate(
       existingVisit._id,

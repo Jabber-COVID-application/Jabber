@@ -10,12 +10,14 @@ import Rollout from "./pages/rollout/Rollout";
 import SidebarLayout from "./components/layout/sidebar-layout/SidebarLayout";
 import Profile from "./pages/profile/Profile";
 import Loader from "./components/layout/loader/Loader";
-import Visit from "./pages/visit/Visit";
+import Checkin from "./pages/visits/checkin/Checkin";
 import {
   RedirectCatchPathAttempt,
   RedirectToPathAttempt,
 } from "./components/routing/path-attempt/PathAttempt";
 import RolloutDetailsForm from "./pages/rollout/rollout-details/RolloutDetailsForm";
+import Visits from "./pages/visits/Visits";
+import Scan from "./pages/visits/scan/Scan";
 
 const App = observer(
   (): JSX.Element => {
@@ -35,7 +37,9 @@ const App = observer(
                   exact
                 />
                 <Route path="/profile" component={Profile} exact />
-                <Route path="/visit/:venueId" component={Visit} exact />
+                <Route path="/visits" component={Visits} exact />
+                <Route path="/visits/scan" component={Scan} exact />
+                <Route path="/visits/:venueId" component={Checkin} exact />
                 <RedirectToPathAttempt to="/dashboard" />
               </Switch>
             </SidebarLayout>
